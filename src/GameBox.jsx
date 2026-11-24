@@ -77,7 +77,7 @@ export function GameBox({ game, picked, onPick }) {
       onClick={onPick}
       aria-pressed={picked}
       aria-label={`${game.name}${picked ? ' (selected)' : ''}`}
-      className={`aspect-[4/5] w-36 shrink-0 snap-center overflow-hidden rounded-lg border-2 text-left shadow-[0_12px_20px_rgb(0_0_0/0.5)] transition sm:w-44 ${
+      className={`aspect-[4/5] w-36 shrink-0 snap-center overflow-hidden rounded-lg border-2 text-left shadow-[0_12px_20px_rgb(0_0_0/0.5)] transition sm:w-40 lg:w-44 ${
         picked
           ? 'picked border-glow shadow-[0_0_0_3px_rgb(255_203_71/0.7),0_0_40px_rgb(255_203_71/0.45)]'
           : 'border-black/40 opacity-80 hover:-translate-y-1 hover:opacity-100'
@@ -92,7 +92,7 @@ export function ComingSoonBox() {
   return (
     <div
       aria-label="More games coming soon"
-      className="flex aspect-[4/5] w-36 shrink-0 snap-center flex-col items-center justify-center rounded-lg border-2 border-dashed border-line bg-dusk/40 text-muted sm:w-44"
+      className="flex aspect-[4/5] w-36 shrink-0 snap-center flex-col items-center justify-center rounded-lg border-2 border-dashed border-line bg-dusk/40 text-muted sm:w-40 lg:w-44"
     >
       <span className="font-display text-4xl">?</span>
       <span className="mt-1 text-xs font-bold uppercase tracking-widest">Coming soon</span>

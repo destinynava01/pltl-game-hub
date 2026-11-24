@@ -51,8 +51,10 @@ export default function App() {
       </header>
 
       {/* The shelf */}
-      <section aria-label="Games" className="mt-10 w-full max-w-4xl">
-        <div className="flex snap-x items-end gap-4 overflow-x-auto px-6 pb-4 pt-8 sm:justify-center sm:gap-6">
+      <section aria-label="Games" className="mt-10 w-full max-w-6xl">
+        {/* Centered when the boxes fit, scrolling from the first box when they don't (auto margins on the
+            ends instead of justify-center, which would push the first box out of reach) */}
+        <div className="flex snap-x items-end gap-4 overflow-x-auto px-6 pb-4 pt-8 sm:gap-5 [&>*:first-child]:ml-auto [&>*:last-child]:mr-auto">
           {GAMES.map((g, i) => (
             <GameBox key={g.id} game={g} picked={i === pick} onPick={() => setPick(i)} />
           ))}
