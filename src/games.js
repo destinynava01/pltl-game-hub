@@ -75,7 +75,7 @@ export const GAMES = [
     best: 'Explaining concepts and vocabulary out loud',
     subjects: 'Any subject',
     teams: 'Groups of 4–8 (3 minimum)',
-    questions: 'Terms from open-response answers',
+    questions: 'Its own term bank (+ optional multiple-choice answers)',
     howToPlay: [
       'The leader hosts a game and shows the join code. Students join on their phones and are put into crews (groups).',
       'Pick the chapters, the thinking time, and whether to play hard mode, then start.',
