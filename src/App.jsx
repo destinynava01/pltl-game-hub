@@ -43,15 +43,16 @@ export default function App() {
   const button = 'rounded-xl border-2 px-4 py-3 text-center font-bold transition focus:outline-2 focus:outline-offset-2 focus:outline-glow'
 
   return (
-    <main className="room flex min-h-dvh flex-col items-center px-4 py-8 text-ink">
-      <header className="text-center">
+    // One screen: the shelves scroll in their own box, and the picked game's details stay in view below them
+    <main className="room flex h-dvh flex-col items-center overflow-hidden px-4 py-4 text-ink">
+      <header className="shrink-0 text-center">
         <p className="text-xs font-bold uppercase tracking-[0.4em] text-muted">Peer-Led Team Learning</p>
-        <h1 className="title-glow mt-2 font-display text-4xl text-glow sm:text-6xl">PLTL Game Hub</h1>
-        <p className="mt-2 text-muted">Pick a game. Every game uses the same question bank, teams, and phones.</p>
+        <h1 className="title-glow mt-1 font-display text-3xl text-glow sm:text-5xl">PLTL Game Hub</h1>
+        <p className="mt-1 text-sm text-muted">Pick a game. Each one opens its own site.</p>
       </header>
 
-      {/* The shelves: any subject first, then one per subject */}
-      <div className="mt-8 w-full max-w-6xl space-y-6">
+      {/* The shelves: any subject first, then one per subject (scrolls up and down on its own) */}
+      <div className="mt-3 max-h-[46dvh] w-full max-w-6xl shrink-0 space-y-4 overflow-y-auto rounded-2xl border-2 border-line/60 bg-night/30 py-2">
         {SHELVES.map((shelf) => {
           const games = ORDERED.filter((g) => g.shelf === shelf.id)
           return (
@@ -77,7 +78,7 @@ export default function App() {
       </div>
 
       {/* The picked game */}
-      <section aria-live="polite" className="mt-8 w-full max-w-2xl rounded-2xl border-2 border-line bg-dusk/90 p-6 shadow-2xl backdrop-blur">
+      <section aria-live="polite" className="mt-4 min-h-0 w-full max-w-2xl flex-1 overflow-y-auto rounded-2xl border-2 border-line bg-dusk/90 p-6 shadow-2xl backdrop-blur">
         <h2 className="font-display text-2xl text-glow">{game.name}</h2>
         <p className="mt-1 font-bold text-muted">{game.tagline}</p>
         <p className="mt-3 leading-relaxed">{game.description}</p>
@@ -111,10 +112,6 @@ export default function App() {
         </a>
         <p className="mt-2 text-center text-xs text-muted">Students join from the code and QR shown in the game&apos;s lobby.</p>
       </section>
-
-      <footer className="mt-auto pt-10 text-center text-xs text-muted">
-        Each game opens its own site.
-      </footer>
     </main>
   )
 }
