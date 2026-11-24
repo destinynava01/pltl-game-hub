@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+/* Game night: a dim room, a warm spotlight on the shelf. */
+@theme {
+  --color-night: #120d24;     /* page */
+  --color-dusk: #1e1740;      /* panels */
+  --color-line: #3a2f6b;      /* borders */
+  --color-ink: #f3efff;       /* text */
+  --color-muted: #b4a9dc;     /* secondary text */
+  --color-glow: #ffcb47;      /* spotlight / selected */
+  --color-on-glow: #1a1200;
+
+  --font-display: "Bungee", "Trebuchet MS", system-ui, sans-serif;
+  --font-vault: "Orbitron", system-ui, sans-serif;
+}
+
+body {
+  font-family: system-ui, "Segoe UI", Roboto, sans-serif;
+  background: var(--color-night);
+  color: var(--color-ink);
+}
+
+.room {
+  background-color: var(--color-night);
+  background-image:
+    radial-gradient(ellipse 60% 45% at 50% 38%, rgb(255 203 71 / 0.16), transparent 70%),
+    radial-gradient(ellipse at 15% 110%, rgb(124 92 255 / 0.25), transparent 55%),
+    radial-gradient(ellipse at 85% 110%, rgb(255 84 160 / 0.18), transparent 55%);
+}
+
+/* The wooden shelf the boxes stand on */
+.shelf {
+  background: linear-gradient(#7a4a26, #5a3418);
+  box-shadow: 0 6px 0 #3b220f, 0 18px 30px rgb(0 0 0 / 0.5);
+}
+
+.title-glow { text-shadow: 0 0 18px rgb(255 203 71 / 0.55), 0 3px 0 #7a4a00; }
+
+/* Box art details */
+.hazard { background: repeating-linear-gradient(-45deg, #ffb020 0 8px, #0b0b0b 8px 16px); }
+
+@keyframes bob {
+  0%, 100% { transform: translateY(-14px) scale(1.06); }
+  50% { transform: translateY(-18px) scale(1.06); }
+}
+.picked { animation: bob 2.4s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .picked { animation: none; transform: translateY(-14px) scale(1.06); }
+}
