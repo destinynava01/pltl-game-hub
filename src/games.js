@@ -58,8 +58,8 @@ export const GAMES = [
     questions: 'Open response (typed answers)',
     howToPlay: [
       'The leader hosts a game and shows the join code. Students join on their phones and are put on teams.',
-      'Pick the chapters and how many locks (4 to 10), then start the escape.',
-      'Every team gets the same locks, each in its own order. Each lock has a key-holder: that teammate types the answer while the team helps.',
+      'Pick the chapters and how many locks (6 to 30), then start the escape.',
+      'Each team draws its own random locks. Each lock has a key-holder: that teammate types the answer while the team helps.',
       'Stuck? A hint shows the first letter and word lengths, for +60 seconds. The leader can accept close calls.',
       'The first team to open every lock escapes. The fastest time (plus hint penalties) wins.',
     ],
