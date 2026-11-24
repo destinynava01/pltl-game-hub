@@ -6,10 +6,12 @@
 //   howToPlay   the steps, in order
 //   subjects    which subjects the game has questions for
 //   shelf       which shelf it sits on (see SHELVES)
+//   time        about how long a game takes
 //   url         the game's main address (its leader lobby)
 export const GAMES = [
   {
     id: 'jeopardy',
+    time: '30–45 min',
     shelf: 'biology',
     name: 'Jeopardy',
     tagline: 'The classic quiz board, for biology.',
@@ -30,6 +32,7 @@ export const GAMES = [
   },
   {
     id: 'monopoly',
+    time: '45–60 min (or end any time)',
     shelf: 'any',
     name: 'Monopoly',
     tagline: 'Roll, answer, buy, and build.',
@@ -52,6 +55,7 @@ export const GAMES = [
   },
   {
     id: 'escape',
+    time: '15–30 min (more locks, longer)',
     shelf: 'any',
     name: 'Escape Room',
     tagline: 'Type the answer to open the lock.',
@@ -72,6 +76,7 @@ export const GAMES = [
   },
   {
     id: 'imposter',
+    time: 'About 5 min a round · 20–40 min',
     shelf: 'any',
     name: 'Imposter',
     tagline: 'Everyone knows the word. Except the alien.',
@@ -93,6 +98,7 @@ export const GAMES = [
   },
   {
     id: 'bakery',
+    time: '10–45 min (you pick the shift)',
     shelf: 'chemistry',
     name: 'Beaker Bakery',
     tagline: 'Convert it right, bake it right.',
@@ -105,7 +111,7 @@ export const GAMES = [
     howToPlay: [
       'The leader hosts a game and shows the join code. Students join on their phones and are put on teams (one team, or even one student, works).',
       'Pick the menus (Breakfast: metric prefixes; Lunch: grams, moles and molecules; Dinner: molarity, density and stoichiometry) and the shift length, then open the kitchen.',
-      'Each team gets an order ticket. The line cook (it rotates every order) types the conversion factors and the final amount while the team helps out loud.',
+      'Each team gets an order ticket and has 5 minutes to serve it. The line cook (it rotates every order) types the conversion factors and the final amount while the team helps out loud, with a built-in calculator on every phone.',
       "🧁 Perfect earns 100 points plus a speed tip. 🥞 Undercooked (right setup, wrong math or sig figs) earns 50. 🔥 Burnt means a factor is wrong or the units don't cancel: try again, and three burns throws the order out.",
       'When the shift clock runs out, teams are ranked by points and stars, and the leader can review every order and download the results.',
     ],

@@ -93,6 +93,7 @@ export default function App() {
           <li className={`rounded-full border px-3 py-1 ${game.subjects === 'Any subject' ? 'border-line text-muted' : 'border-glow text-glow'}`}>
             📚 {game.subjects}
           </li>
+          <li className="rounded-full border border-glow/70 px-3 py-1 text-glow">⏱ {game.time}</li>
           <li className="rounded-full border border-line px-3 py-1 text-muted">👥 {game.teams}</li>
           <li className="rounded-full border border-line px-3 py-1 text-muted">❓ {game.questions}</li>
         </ul>
