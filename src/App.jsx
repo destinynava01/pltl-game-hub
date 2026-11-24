@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
 import { ComingSoonBox, GameBox } from './GameBox'
-import { COMING_SOON, GAMES, link } from './games'
+import { ORDERED, SHELVES, link } from './games'
 
 const PICK_KEY = 'pltlHubPick'
 
 function readPick() {
   try {
-    const index = GAMES.findIndex((g) => g.id === localStorage.getItem(PICK_KEY))
+    const index = ORDERED.findIndex((g) => g.id === localStorage.getItem(PICK_KEY))
     return index >= 0 ? index : 0
   } catch {
     return 0
@@ -17,7 +17,7 @@ function readPick() {
 // that game's own website.
 export default function App() {
   const [pick, setPick] = useState(readPick)
-  const game = GAMES[pick]
+  const game = ORDERED[pick]
 
   // Remember the last game picked on this device
   useEffect(() => {
@@ -32,9 +32,9 @@ export default function App() {
   useEffect(() => {
     function onKey(event) {
       if (event.target.closest?.('a, input, textarea')) return
-      if (event.key === 'ArrowRight') setPick((p) => (p + 1) % GAMES.length)
-      if (event.key === 'ArrowLeft') setPick((p) => (p - 1 + GAMES.length) % GAMES.length)
-      if (event.key === 'Enter' && !event.target.closest?.('button')) window.location.href = link(GAMES[pick])
+      if (event.key === 'ArrowRight') setPick((p) => (p + 1) % ORDERED.length)
+      if (event.key === 'ArrowLeft') setPick((p) => (p - 1 + ORDERED.length) % ORDERED.length)
+      if (event.key === 'Enter' && !event.target.closest?.('button')) window.location.href = link(ORDERED[pick])
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
@@ -50,19 +50,31 @@ export default function App() {
         <p className="mt-2 text-muted">Pick a game. Every game uses the same question bank, teams, and phones.</p>
       </header>
 
-      {/* The shelf */}
-      <section aria-label="Games" className="mt-10 w-full max-w-6xl">
-        {/* Centered when the boxes fit, scrolling from the first box when they don't (auto margins on the
-            ends instead of justify-center, which would push the first box out of reach) */}
-        <div className="flex snap-x items-end gap-4 overflow-x-auto px-6 pb-4 pt-8 sm:gap-5 [&>*:first-child]:ml-auto [&>*:last-child]:mr-auto">
-          {GAMES.map((g, i) => (
-            <GameBox key={g.id} game={g} picked={i === pick} onPick={() => setPick(i)} />
-          ))}
-          {Array.from({ length: COMING_SOON }, (_, i) => <ComingSoonBox key={i} />)}
-        </div>
-        <div className="shelf mx-auto h-4 w-full rounded-sm" />
-        <p className="mt-3 hidden text-center text-xs text-muted sm:block">◀ ▶ arrow keys to browse · Enter to host</p>
-      </section>
+      {/* The shelves: any subject first, then one per subject */}
+      <div className="mt-8 w-full max-w-6xl space-y-6">
+        {SHELVES.map((shelf) => {
+          const games = ORDERED.filter((g) => g.shelf === shelf.id)
+          return (
+            <section key={shelf.id} aria-label={`${shelf.title} games`}>
+              <div className="flex items-baseline justify-between gap-3 px-6">
+                <h2 className="font-display text-lg text-glow">{shelf.title}</h2>
+                <p className="text-xs text-muted">{shelf.note}</p>
+              </div>
+              {/* Centered when the boxes fit, scrolling from the first box when they don't (auto margins on the
+                  ends instead of justify-center, which would push the first box out of reach) */}
+              <div className="flex snap-x items-end gap-4 overflow-x-auto px-6 pb-4 pt-6 sm:gap-5 [&>*:first-child]:ml-auto [&>*:last-child]:mr-auto">
+                {games.map((g) => {
+                  const i = ORDERED.indexOf(g)
+                  return <GameBox key={g.id} game={g} picked={i === pick} onPick={() => setPick(i)} />
+                })}
+                {Array.from({ length: shelf.comingSoon }, (_, i) => <ComingSoonBox key={i} />)}
+              </div>
+              <div className="shelf mx-auto h-4 w-full rounded-sm" />
+            </section>
+          )
+        })}
+        <p className="hidden text-center text-xs text-muted sm:block">◀ ▶ arrow keys to browse · Enter to host</p>
+      </div>
 
       {/* The picked game */}
       <section aria-live="polite" className="mt-8 w-full max-w-2xl rounded-2xl border-2 border-line bg-dusk/90 p-6 shadow-2xl backdrop-blur">

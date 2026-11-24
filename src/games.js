@@ -5,10 +5,12 @@
 //   best        what it's best for (shown as "Recommended for")
 //   howToPlay   the steps, in order
 //   subjects    which subjects the game has questions for
+//   shelf       which shelf it sits on (see SHELVES)
 //   url         the game's main address (its leader lobby)
 export const GAMES = [
   {
     id: 'jeopardy',
+    shelf: 'biology',
     name: 'Jeopardy',
     tagline: 'The classic quiz board, for biology.',
     description:
@@ -28,6 +30,7 @@ export const GAMES = [
   },
   {
     id: 'monopoly',
+    shelf: 'any',
     name: 'Monopoly',
     tagline: 'Roll, answer, buy, and build.',
     description:
@@ -49,6 +52,7 @@ export const GAMES = [
   },
   {
     id: 'escape',
+    shelf: 'any',
     name: 'Escape Room',
     tagline: 'Type the answer to open the lock.',
     description:
@@ -68,6 +72,7 @@ export const GAMES = [
   },
   {
     id: 'imposter',
+    shelf: 'any',
     name: 'Imposter',
     tagline: 'Everyone knows the word. Except the alien.',
     description:
@@ -88,7 +93,15 @@ export const GAMES = [
   },
 ]
 
-// Empty spots on the shelf for games that aren't built yet
-export const COMING_SOON = 1
+// The shelves, top to bottom. Games that work with any subject first, then shelves for one subject.
+// comingSoon: empty "coming soon" spots on that shelf.
+export const SHELVES = [
+  { id: 'any', title: 'Any subject', note: 'Use questions from any course in the shared bank', comingSoon: 0 },
+  { id: 'biology', title: 'Biology', note: 'Built for biology questions', comingSoon: 0 },
+  { id: 'chemistry', title: 'Chemistry', note: 'Coming soon', comingSoon: 1 },
+]
+
+// Every game in shelf order (the order the arrow keys move through)
+export const ORDERED = SHELVES.flatMap((shelf) => GAMES.filter((g) => g.shelf === shelf.id))
 
 export const link = (game, path = '') => new URL(path, game.url).toString()
