@@ -65,34 +65,41 @@ export default function App() {
       {/* The picked game */}
       <section aria-live="polite" className="mt-8 w-full max-w-2xl rounded-2xl border-2 border-line bg-dusk/90 p-6 shadow-2xl backdrop-blur">
         <h2 className="font-display text-2xl text-glow">{game.name}</h2>
-        <p className="mt-2">{game.tagline}</p>
-        <ul className="mt-4 flex flex-wrap gap-2 text-xs font-bold">
+        <p className="mt-1 font-bold text-muted">{game.tagline}</p>
+        <p className="mt-3 leading-relaxed">{game.description}</p>
+
+        {/* What it's best for, front and center */}
+        <p className="mt-4 rounded-xl border-2 border-glow/60 bg-night/60 px-4 py-3">
+          <span className="text-xs font-bold uppercase tracking-widest text-glow">⭐ Recommended for</span>
+          <span className="mt-0.5 block text-lg font-bold">{game.best}</span>
+        </p>
+
+        <ul className="mt-3 flex flex-wrap gap-2 text-xs font-bold">
           <li className={`rounded-full border px-3 py-1 ${game.subjects === 'Any subject' ? 'border-line text-muted' : 'border-glow text-glow'}`}>
             📚 {game.subjects}
           </li>
           <li className="rounded-full border border-line px-3 py-1 text-muted">👥 {game.teams}</li>
           <li className="rounded-full border border-line px-3 py-1 text-muted">❓ {game.questions}</li>
-          <li className="rounded-full border border-line px-3 py-1 text-muted">⭐ Best for: {game.best}</li>
         </ul>
 
-        <div className="mt-6 grid gap-3 sm:grid-cols-2">
-          <a href={link(game)} className={`${button} border-glow bg-glow text-on-glow hover:brightness-110 sm:col-span-2`}>
-            ▶ Host a game <span className="font-normal">(leaders)</span>
-          </a>
-          <a href={link(game, 'join')} className={`${button} border-line bg-night/60 hover:border-glow`}>
-            📱 Join with a code <span className="block text-xs font-normal text-muted">students</span>
-          </a>
-          <a href={link(game, 'submit')} className={`${button} border-line bg-night/60 hover:border-glow`}>
-            ✎ Submit questions <span className="block text-xs font-normal text-muted">anyone</span>
-          </a>
-          <a href={link(game, 'review')} className={`${button} border-line bg-night/60 hover:border-glow sm:col-span-2`}>
-            ✓ Review questions <span className="text-xs font-normal text-muted">(reviewers sign in)</span>
-          </a>
-        </div>
+        <h3 className="mt-6 font-display text-sm uppercase tracking-widest text-glow">How to play</h3>
+        <ol className="mt-2 space-y-2">
+          {game.howToPlay.map((step, i) => (
+            <li key={i} className="flex gap-3">
+              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-glow text-xs font-black text-on-glow">{i + 1}</span>
+              <span className="text-sm leading-relaxed">{step}</span>
+            </li>
+          ))}
+        </ol>
+
+        <a href={link(game)} className={`${button} mt-6 block border-glow bg-glow text-lg text-on-glow hover:brightness-110`}>
+          ▶ Host {game.name}
+        </a>
+        <p className="mt-2 text-center text-xs text-muted">Students join from the code and QR shown in the game&apos;s lobby.</p>
       </section>
 
       <footer className="mt-auto pt-10 text-center text-xs text-muted">
-        Each game opens its own site. Questions submitted to one game can be shared with the others.
+        Each game opens its own site.
       </footer>
     </main>
   )
