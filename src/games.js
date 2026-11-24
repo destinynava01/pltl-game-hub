@@ -69,9 +69,9 @@ export const GAMES = [
   {
     id: 'imposter',
     name: 'Imposter',
-    tagline: 'Everyone knows the word. Except one of you.',
+    tagline: 'Everyone knows the word. Except the alien.',
     description:
-      'Each group gets a secret term, except one student: the imposter, who only sees the chapter. Everyone gives one clue out loud, then the group votes. Students have to explain a concept well enough to prove they know it, without giving it away.',
+      'Each crew gets a secret term, except one student: the alien, who only sees the chapter. Everyone gives one clue out loud, then the group votes. Students have to explain a concept well enough to prove they know it, without giving it away.',
     best: 'Explaining concepts and vocabulary out loud',
     subjects: 'Any subject',
     teams: 'Groups of 4–8 (3 minimum)',

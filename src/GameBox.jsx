@@ -55,14 +55,14 @@ function EscapeArt() {
 
 function ImposterArt() {
   return (
-    <div className="relative flex h-full flex-col overflow-hidden bg-[#0c0a0f]">
-      <div className="absolute inset-x-0 top-0 h-2/3 bg-[radial-gradient(ellipse_at_50%_0%,rgb(242_196_109/0.35),transparent_70%)]" />
-      <p className="relative mt-3 text-center text-[10px] font-bold uppercase tracking-[0.35em] text-[#f2c46d]">PLTL · Case file</p>
-      <p className="relative mt-1 text-center text-xl font-black uppercase tracking-wider text-[#e5484d] drop-shadow-[0_0_8px_rgb(229_72_77/0.7)]">Imposter</p>
+    <div className="relative flex h-full flex-col overflow-hidden bg-[#05060f] bg-[radial-gradient(1px_1px_at_12px_18px,#fff,transparent),radial-gradient(1px_1px_at_70px_40px,#b48cff,transparent),radial-gradient(1px_1px_at_120px_22px,#fff,transparent),radial-gradient(1px_1px_at_40px_90px,#fff,transparent)]">
+      <div className="absolute inset-x-6 top-0 h-full bg-[linear-gradient(180deg,rgb(57_255_136/0.25),transparent_75%)] [clip-path:polygon(35%_0,65%_0,100%_100%,0_100%)]" />
+      <p className="relative mt-3 text-center text-[10px] font-bold uppercase tracking-[0.35em] text-[#b48cff]">PLTL · Among the crew</p>
+      <p className="relative mt-1 text-center text-xl font-black uppercase tracking-wider text-[#39ff88] drop-shadow-[0_0_8px_rgb(57_255_136/0.8)]">Imposter</p>
       <div className="relative mt-auto flex justify-center gap-1.5 pb-4 text-2xl">
-        <span>🙂</span><span>🙂</span><span className="drop-shadow-[0_0_8px_rgb(229_72_77/0.9)]">🕵️</span><span>🙂</span>
+        <span>🧑‍🚀</span><span>🧑‍🚀</span><span className="drop-shadow-[0_0_8px_rgb(57_255_136/0.9)]">👽</span><span>🧑‍🚀</span>
       </div>
-      <div className="h-2.5 bg-[repeating-linear-gradient(-45deg,#f2c46d_0_10px,#111_10px_20px)]" />
+      <div className="h-1.5 bg-[linear-gradient(90deg,transparent,#39ff88,#b48cff,#39ff88,transparent)]" />
     </div>
   )
 }
