@@ -117,6 +117,27 @@ export const GAMES = [
     ],
     url: 'https://pltl-beaker-bakery.vercel.app/',
   },
+  {
+    id: 'patchknight',
+    shelf: 'business-engineering',
+    time: '30–60 min (students go at their own pace)',
+    name: 'Patch Knight',
+    tagline: 'The game is broken. Your code fixes it.',
+    description:
+      "An RPG where every zone is bugged: the inventory skips items, swords point to the wrong things, the dungeon never stops generating rooms. Students fix real C++ (linked lists, pointers, classes, recursion, sorting and searching) to repair the world and unlock the next zone.",
+    best: 'CS2: debugging and reading C++',
+    subjects: 'Computer science (C++)',
+    teams: 'Solo or small groups (one screen each)',
+    questions: 'Built-in C++ bugs: fill in the blank, find & fix, put in order, predict the output',
+    howToPlay: [
+      'The leader starts a game and shows the join code. Students join solo or as a small group on one laptop.',
+      'Each knight explores six zones: Inventory Caves (linked lists), Armory of Pointers, Guild Hall (classes), Recursive Dungeon, Arena Rankings (sorting) and Cartographer\'s Tower (searching).',
+      'Every zone has bugs in real C++. Fill in a blank, click the broken line and rewrite it, put lines in order, or predict the output. Fixing a bug repairs that part of the game.',
+      'Wrong answers show what that mistake would break. Hints cost XP, and after three misses a knight can ask to see the fix.',
+      'The leader\'s dashboard shows every knight\'s zone and progress live, plus the bugs the class misses most. End the game for a report and an Excel download.',
+    ],
+    url: 'https://pltl-patch-knight.vercel.app/',
+  },
 ]
 
 // The shelves, top to bottom. Games that work with any subject first, then shelves for one subject.
@@ -125,6 +146,7 @@ export const SHELVES = [
   { id: 'any', title: 'Any subject', note: 'Use questions from any course in the shared bank', comingSoon: 0 },
   { id: 'biology', title: 'Biology', note: 'Built for biology questions', comingSoon: 0 },
   { id: 'chemistry', title: 'Chemistry', note: 'Built for chemistry skills', comingSoon: 0 },
+  { id: 'business-engineering', title: 'Business & Engineering', note: 'Built for computer science, engineering and business', comingSoon: 0 },
 ]
 
 // Every game in shelf order (the order the arrow keys move through)

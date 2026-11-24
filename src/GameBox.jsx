@@ -82,7 +82,21 @@ function BakeryArt() {
   )
 }
 
-const ART = { jeopardy: JeopardyArt, monopoly: MonopolyArt, escape: EscapeArt, imposter: ImposterArt, bakery: BakeryArt }
+function PatchKnightArt() {
+  return (
+    <div className="relative flex h-full flex-col overflow-hidden bg-[#0f0e17] bg-[linear-gradient(rgb(255_255_255/0.04)_1px,transparent_1px),linear-gradient(90deg,rgb(255_255_255/0.04)_1px,transparent_1px)] [background-size:10px_10px]">
+      <p className="mt-3 text-center text-[10px] font-bold uppercase tracking-[0.3em] text-[#4cc9f0]">PLTL · CS2</p>
+      <p className="mt-1 text-center font-mono text-xl font-black uppercase leading-tight text-[#3ddc84] [text-shadow:2px_0_#ff3d81,-2px_0_#4cc9f0]">Patch<br />Knight</p>
+      <svg viewBox="0 0 16 16" className="mx-auto mt-auto h-14 w-14" shapeRendering="crispEdges" aria-hidden="true">
+        <path fill="#c9d1e0" d="M5 2h6v1h1v5h-1v1H5V8H4V3h1z" /><path fill="#0f0e17" d="M6 5h4v1H6z" /><path fill="#3ddc84" d="M5 10h6v4H5z" />
+        <path fill="#7a7799" d="M5 14h2v1H5zM9 14h2v1H9z" /><path fill="#ff3d81" d="M12 4h1v7h-1z" /><path fill="#ffd166" d="M11 10h3v1h-3z" />
+      </svg>
+      <p className="pb-2 text-center font-mono text-[9px] text-[#ff3d81]">ERR: segfault at 0x0</p>
+    </div>
+  )
+}
+
+const ART = { jeopardy: JeopardyArt, monopoly: MonopolyArt, escape: EscapeArt, imposter: ImposterArt, bakery: BakeryArt, patchknight: PatchKnightArt }
 
 export function GameBox({ game, picked, onPick }) {
   const Art = ART[game.id]
