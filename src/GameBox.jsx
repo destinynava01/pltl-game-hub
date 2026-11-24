@@ -6,7 +6,7 @@ const PROPERTY_COLORS = ['#92400e', '#7dd3fc', '#f472b6', '#fb923c', '#dc2626', 
 function JeopardyArt() {
   return (
     <div className="flex h-full flex-col bg-[#0b1f73] p-3">
-      <p className="text-center text-[11px] font-bold uppercase tracking-[0.3em] text-sky-200">PLTL</p>
+      <p className="text-center text-[11px] font-bold uppercase tracking-[0.3em] text-sky-200">PLTL · Biology</p>
       <p className="text-center text-xl font-black uppercase tracking-wide text-yellow-300 drop-shadow-[0_2px_0_#000]">Jeopardy</p>
       <div className="mt-auto grid grid-cols-3 gap-1">
         {POINTS.flatMap((p) => [0, 1, 2].map((k) => (

@@ -67,6 +67,9 @@ export default function App() {
         <h2 className="font-display text-2xl text-glow">{game.name}</h2>
         <p className="mt-2">{game.tagline}</p>
         <ul className="mt-4 flex flex-wrap gap-2 text-xs font-bold">
+          <li className={`rounded-full border px-3 py-1 ${game.subjects === 'Any subject' ? 'border-line text-muted' : 'border-glow text-glow'}`}>
+            📚 {game.subjects}
+          </li>
           <li className="rounded-full border border-line px-3 py-1 text-muted">👥 {game.teams}</li>
           <li className="rounded-full border border-line px-3 py-1 text-muted">❓ {game.questions}</li>
           <li className="rounded-full border border-line px-3 py-1 text-muted">⭐ Best for: {game.best}</li>
