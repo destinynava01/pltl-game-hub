@@ -15,7 +15,7 @@ export const GAMES = [
       'Two teams take turns picking a category and a point value. Everyone on the team votes on their phone, and the most popular answer counts. Miss it, and the other team gets a chance to steal.',
     best: 'A fast review of one chapter',
     subjects: 'Biology only',
-    teams: '2 teams',
+    teams: '2 teams (at least 1 student each)',
     questions: 'Multiple choice & true/false',
     howToPlay: [
       'The leader hosts a game and shows the join code. Students join on their phones and are put on a team.',
@@ -34,7 +34,7 @@ export const GAMES = [
       'Teams move around a property board and answer a question to buy the space they land on. Cheap properties ask easier questions and pricey ones ask harder ones. Own a full color set to build, collect rent, and trade with other teams.',
     best: 'A longer, strategic session',
     subjects: 'Any subject',
-    teams: '2–8 teams',
+    teams: '2–8 teams (at least 1 student each)',
     questions: 'Multiple choice & true/false',
     howToPlay: [
       'The leader hosts a game and shows the join code. Students join on their phones and are put on teams.',
@@ -55,7 +55,7 @@ export const GAMES = [
       'Every team races at the same time through a chain of locks. Each lock is a question students answer by typing, not by picking from choices, and small typos are forgiven. First team out wins.',
     best: 'Lab practicals and vocabulary',
     subjects: 'Any subject',
-    teams: '2–8 teams',
+    teams: '1–8 teams (solo works)',
     questions: 'Open response (typed answers)',
     howToPlay: [
       'The leader hosts a game and shows the join code. Students join on their phones and are put on teams.',
@@ -74,7 +74,7 @@ export const GAMES = [
       'Each crew gets a secret term, except one student: the alien, who only sees the chapter. Everyone gives one clue out loud, then the crew votes. Students have to explain a concept well enough to prove they know it, without giving it away.',
     best: 'Explaining concepts and vocabulary out loud',
     subjects: 'Any subject',
-    teams: 'Groups of 4–8 (3 minimum)',
+    teams: 'Groups of 4–8 (at least 3 each)',
     questions: 'Its own term bank (+ optional multiple-choice answers)',
     howToPlay: [
       'The leader hosts a game and shows the join code. Students join on their phones and are put into crews (groups).',
