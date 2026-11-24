@@ -42,7 +42,8 @@ export const GAMES = [
       'A student on the team rolls on their phone, taking turns. The team moves around the board.',
       'Land on a property and the team answers on their phones. A right answer lets them buy it. Land on another team\'s property and pay rent.',
       'Own every property of a color to build houses and hotels. Teams can trade properties and cash.',
-      'The leader ends the game when time is up. The highest net worth wins; a team below $0 is out.',
+      'Doubles roll again; doubles twice in a row (or Go To Jail) sends a team to jail. Pay $50 bail or roll doubles to get out.',
+      'A team below $0 goes bankrupt and its students join the other teams. The last team standing wins, or the leader ends the game and the highest net worth wins.',
     ],
     url: 'https://pltl-monopoly.vercel.app/',
   },
@@ -64,6 +65,26 @@ export const GAMES = [
       'The first team to open every lock escapes. The fastest time (plus hint penalties) wins.',
     ],
     url: 'https://pltl-escape-room.vercel.app/',
+  },
+  {
+    id: 'imposter',
+    name: 'Imposter',
+    tagline: 'Everyone knows the word. Except one of you.',
+    description:
+      'Each group gets a secret term, except one student: the imposter, who only sees the chapter. Everyone gives one clue out loud, then the group votes. Students have to explain a concept well enough to prove they know it, without giving it away.',
+    best: 'Explaining concepts and vocabulary out loud',
+    subjects: 'Any subject',
+    teams: 'Groups of 4–8 (3 minimum)',
+    questions: 'Terms from open-response answers',
+    howToPlay: [
+      'The leader hosts a game and shows the join code. Students join on their phones and are put in groups.',
+      'Pick the chapters, the thinking time, and whether to play hard mode, then start.',
+      "Every phone shows the group's secret term, except the imposter's, which shows only the chapter. In hard mode the imposter gets a similar term instead and isn't told.",
+      'After the thinking time, students give one clue each out loud, in the order on screen, tapping Done when finished.',
+      'The group votes on their phones. A caught imposter gets one guess at the term.',
+      'Imposter caught: everyone else +1. Imposter gets away or guesses the term: imposter +2. The projector then shows the term and its question to teach from.',
+    ],
+    url: 'https://pltl-imposter.vercel.app/',
   },
 ]
 

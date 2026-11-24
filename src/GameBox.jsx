@@ -53,7 +53,21 @@ function EscapeArt() {
   )
 }
 
-const ART = { jeopardy: JeopardyArt, monopoly: MonopolyArt, escape: EscapeArt }
+function ImposterArt() {
+  return (
+    <div className="relative flex h-full flex-col overflow-hidden bg-[#0c0a0f]">
+      <div className="absolute inset-x-0 top-0 h-2/3 bg-[radial-gradient(ellipse_at_50%_0%,rgb(242_196_109/0.35),transparent_70%)]" />
+      <p className="relative mt-3 text-center text-[10px] font-bold uppercase tracking-[0.35em] text-[#f2c46d]">PLTL · Case file</p>
+      <p className="relative mt-1 text-center text-xl font-black uppercase tracking-wider text-[#e5484d] drop-shadow-[0_0_8px_rgb(229_72_77/0.7)]">Imposter</p>
+      <div className="relative mt-auto flex justify-center gap-1.5 pb-4 text-2xl">
+        <span>🙂</span><span>🙂</span><span className="drop-shadow-[0_0_8px_rgb(229_72_77/0.9)]">🕵️</span><span>🙂</span>
+      </div>
+      <div className="h-2.5 bg-[repeating-linear-gradient(-45deg,#f2c46d_0_10px,#111_10px_20px)]" />
+    </div>
+  )
+}
+
+const ART = { jeopardy: JeopardyArt, monopoly: MonopolyArt, escape: EscapeArt, imposter: ImposterArt }
 
 export function GameBox({ game, picked, onPick }) {
   const Art = ART[game.id]
