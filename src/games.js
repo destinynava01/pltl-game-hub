@@ -60,7 +60,7 @@ export const GAMES = [
       'The leader hosts a game and shows the join code. Students join on their phones and are put on teams.',
       'Pick the chapters and how many locks (6 to 30), then start the escape.',
       'Each team draws its own random locks. Each lock has a key-holder: that teammate types the answer while the team helps.',
-      'Stuck? A hint shows the first letter and word lengths, for +60 seconds. The leader can accept close calls.',
+      'Three guesses per lock: wrong guesses add 15, 30, then 45 seconds, and the third shows the answer and moves that question 3 locks later. A hint (+60 s) shows the first letter and word lengths.',
       'The first team to open every lock escapes. The fastest time (plus hint penalties) wins.',
     ],
     url: 'https://pltl-escape-room.vercel.app/',
