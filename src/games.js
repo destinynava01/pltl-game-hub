@@ -91,6 +91,26 @@ export const GAMES = [
     ],
     url: 'https://pltl-imposter.vercel.app/',
   },
+  {
+    id: 'bakery',
+    shelf: 'chemistry',
+    name: 'Beaker Bakery',
+    tagline: 'Convert it right, bake it right.',
+    description:
+      "Chemistry conversions come in as kitchen orders. The line cook writes the conversion chain on their phone: if a factor is flipped or the units don't cancel, the dish burns. Right setup but wrong math or sig figs? Undercooked. Get it all right before the customer walks out.",
+    best: 'Dimensional analysis and sig figs',
+    subjects: 'Chemistry',
+    teams: '1–8 teams (solo works, at least 1 student each)',
+    questions: 'Built-in orders with random numbers (no question bank needed)',
+    howToPlay: [
+      'The leader hosts a game and shows the join code. Students join on their phones and are put on teams (one team, or even one student, works).',
+      'Pick the menus (Breakfast: metric prefixes; Lunch: grams, moles and molecules; Dinner: molarity, density and stoichiometry) and the shift length, then open the kitchen.',
+      'Each team gets an order ticket. The line cook (it rotates every order) types the conversion factors and the final amount while the team helps out loud.',
+      "🧁 Perfect earns 100 points plus a speed tip. 🥞 Undercooked (right setup, wrong math or sig figs) earns 50. 🔥 Burnt means a factor is wrong or the units don't cancel: try again, and three burns throws the order out.",
+      'When the shift clock runs out, teams are ranked by points and stars, and the leader can review every order and download the results.',
+    ],
+    url: 'https://pltl-beaker-bakery.vercel.app/',
+  },
 ]
 
 // The shelves, top to bottom. Games that work with any subject first, then shelves for one subject.
@@ -98,7 +118,7 @@ export const GAMES = [
 export const SHELVES = [
   { id: 'any', title: 'Any subject', note: 'Use questions from any course in the shared bank', comingSoon: 0 },
   { id: 'biology', title: 'Biology', note: 'Built for biology questions', comingSoon: 0 },
-  { id: 'chemistry', title: 'Chemistry', note: 'Coming soon', comingSoon: 1 },
+  { id: 'chemistry', title: 'Chemistry', note: 'Built for chemistry skills', comingSoon: 0 },
 ]
 
 // Every game in shelf order (the order the arrow keys move through)

@@ -67,7 +67,21 @@ function ImposterArt() {
   )
 }
 
-const ART = { jeopardy: JeopardyArt, monopoly: MonopolyArt, escape: EscapeArt, imposter: ImposterArt }
+function BakeryArt() {
+  return (
+    <div className="relative flex h-full flex-col overflow-hidden bg-[#fff4ea] bg-[radial-gradient(rgb(255_95_158/0.25)_2px,transparent_2.5px)] [background-size:18px_18px]">
+      <div className="h-3 bg-white bg-[linear-gradient(90deg,rgb(255_95_158/0.5)_50%,transparent_50%),linear-gradient(rgb(255_95_158/0.5)_50%,transparent_50%)] [background-size:10px_10px]" />
+      <p className="mt-2 text-center text-[10px] font-bold uppercase tracking-[0.3em] text-[#20b28f]">PLTL · Chemistry</p>
+      <p className="mt-1 text-center text-xl font-black leading-tight text-[#ff5f9e] drop-shadow-[0_2px_0_#fff]">Beaker<br />Bakery</p>
+      <div className="mt-auto flex justify-center gap-1 pb-3 text-2xl">
+        <span>🧪</span><span>🧁</span><span>⚖️</span>
+      </div>
+      <div className="h-2 bg-[#ff5f9e]" />
+    </div>
+  )
+}
+
+const ART = { jeopardy: JeopardyArt, monopoly: MonopolyArt, escape: EscapeArt, imposter: ImposterArt, bakery: BakeryArt }
 
 export function GameBox({ game, picked, onPick }) {
   const Art = ART[game.id]
