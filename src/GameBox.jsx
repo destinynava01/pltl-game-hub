@@ -69,14 +69,15 @@ function ImposterArt() {
 
 function BakeryArt() {
   return (
-    <div className="relative flex h-full flex-col overflow-hidden bg-[#fff4ea] bg-[radial-gradient(rgb(255_95_158/0.25)_2px,transparent_2.5px)] [background-size:18px_18px]">
-      <div className="h-3 bg-white bg-[linear-gradient(90deg,rgb(255_95_158/0.5)_50%,transparent_50%),linear-gradient(rgb(255_95_158/0.5)_50%,transparent_50%)] [background-size:10px_10px]" />
-      <p className="mt-2 text-center text-[10px] font-bold uppercase tracking-[0.3em] text-[#20b28f]">PLTL · Chemistry</p>
-      <p className="mt-1 text-center text-xl font-black leading-tight text-[#ff5f9e] drop-shadow-[0_2px_0_#fff]">Beaker<br />Bakery</p>
+    <div className="relative flex h-full flex-col overflow-hidden bg-[#f4ede1]">
+      {/* The shop awning: teal and cream stripes */}
+      <div className="h-6 bg-[repeating-linear-gradient(90deg,#17807a_0_12px,#fffdf8_12px_24px)]" />
+      <p className="mt-2 text-center text-[10px] font-bold uppercase tracking-[0.3em] text-[#17807a]">PLTL · Chemistry</p>
+      <p className="mt-1 text-center font-serif text-xl font-black leading-tight text-[#d9652b]">Beaker<br />Bakery</p>
       <div className="mt-auto flex justify-center gap-1 pb-3 text-2xl">
-        <span>🧪</span><span>🧁</span><span>⚖️</span>
+        <span>🧪</span><span>🥐</span><span>⚖️</span>
       </div>
-      <div className="h-2 bg-[#ff5f9e]" />
+      <div className="h-2.5 bg-[#fffdf8] bg-[linear-gradient(90deg,rgb(38_56_92/0.5)_50%,transparent_50%),linear-gradient(rgb(38_56_92/0.5)_50%,transparent_50%)] [background-size:8px_8px]" />
     </div>
   )
 }
