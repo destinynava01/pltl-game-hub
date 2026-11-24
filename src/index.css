@@ -48,3 +48,9 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .picked { animation: none; transform: translateY(-14px) scale(1.06); }
 }
+
+/* Thin gold scrollbars for the shelves and the game details (instead of the browser's white ones) */
+.scroll-soft { scrollbar-width: thin; scrollbar-color: rgb(255 203 71 / 0.45) transparent; }
+.scroll-soft::-webkit-scrollbar { width: 8px; }
+.scroll-soft::-webkit-scrollbar-track { background: transparent; }
+.scroll-soft::-webkit-scrollbar-thumb { background: rgb(255 203 71 / 0.45); border-radius: 999px; }

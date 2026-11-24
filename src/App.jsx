@@ -43,23 +43,25 @@ export default function App() {
   const button = 'rounded-xl border-2 px-4 py-3 text-center font-bold transition focus:outline-2 focus:outline-offset-2 focus:outline-glow'
 
   return (
-    // One screen: the shelves scroll in their own box, and the picked game's details stay in view below them
-    <main className="room flex h-dvh flex-col items-center overflow-hidden px-4 py-4 text-ink">
-      <header className="shrink-0 text-center">
+    // Wide screens: shelves on the left and the picked game on the right, each scrolling on its own. Phones: one page.
+    <main className="room min-h-dvh overflow-x-hidden text-ink lg:h-dvh lg:overflow-hidden">
+      <div className="mx-auto flex max-w-[1500px] flex-col gap-6 px-4 py-6 lg:h-full lg:flex-row lg:gap-8 lg:py-5">
+      <div className="flex min-w-0 flex-1 flex-col lg:min-h-0">
+      <header className="shrink-0 text-center lg:pt-2">
         <p className="text-xs font-bold uppercase tracking-[0.4em] text-muted">Peer-Led Team Learning</p>
         <h1 className="title-glow mt-1 font-display text-3xl text-glow sm:text-5xl">PLTL Game Hub</h1>
         <p className="mt-1 text-sm text-muted">Pick a game. Each one opens its own site.</p>
       </header>
 
       {/* The shelves: any subject first, then one per subject (scrolls up and down on its own) */}
-      <div className="mt-3 max-h-[46dvh] w-full max-w-6xl shrink-0 space-y-4 overflow-y-auto rounded-2xl border-2 border-line/60 bg-night/30 py-2">
+      <div className="scroll-soft mt-5 w-full min-w-0 space-y-8 lg:min-h-0 lg:flex-1 lg:overflow-y-auto lg:pr-2">
         {SHELVES.map((shelf) => {
           const games = ORDERED.filter((g) => g.shelf === shelf.id)
           return (
             <section key={shelf.id} aria-label={`${shelf.title} games`}>
-              <div className="flex items-baseline justify-between gap-3 px-6">
+              <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-0.5 px-2 sm:px-6">
                 <h2 className="font-display text-lg text-glow">{shelf.title}</h2>
-                <p className="text-xs text-muted">{shelf.note}</p>
+                <p className="min-w-0 text-xs text-muted">{shelf.note}</p>
               </div>
               {/* Centered when the boxes fit, scrolling from the first box when they don't (auto margins on the
                   ends instead of justify-center, which would push the first box out of reach) */}
@@ -76,9 +78,10 @@ export default function App() {
         })}
         <p className="hidden text-center text-xs text-muted sm:block">◀ ▶ arrow keys to browse · Enter to host</p>
       </div>
+      </div>
 
       {/* The picked game */}
-      <section aria-live="polite" className="mt-4 min-h-0 w-full max-w-2xl flex-1 overflow-y-auto rounded-2xl border-2 border-line bg-dusk/90 p-6 shadow-2xl backdrop-blur">
+      <section aria-live="polite" className="scroll-soft rounded-2xl border-2 border-line bg-dusk/90 p-6 shadow-2xl backdrop-blur lg:w-[32rem] lg:shrink-0 lg:overflow-y-auto">
         <h2 className="font-display text-2xl text-glow">{game.name}</h2>
         <p className="mt-1 font-bold text-muted">{game.tagline}</p>
         <p className="mt-3 leading-relaxed">{game.description}</p>
@@ -113,6 +116,7 @@ export default function App() {
         </a>
         <p className="mt-2 text-center text-xs text-muted">Students join from the code and QR shown in the game&apos;s lobby.</p>
       </section>
+      </div>
     </main>
   )
 }
