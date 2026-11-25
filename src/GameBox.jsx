@@ -140,7 +140,21 @@ function LimitingSuspectArt() {
   )
 }
 
-const ART = { cascade: CascadeArt, jeopardy: JeopardyArt, monopoly: MonopolyArt, escape: EscapeArt, imposter: ImposterArt, bakery: BakeryArt, patchknight: PatchKnightArt, organized: OrganizedArt, limitingsuspect: LimitingSuspectArt }
+function WhatsTheDamageArt() {
+  return (
+    <div className="relative flex h-full flex-col overflow-hidden bg-[#1f2d27]">
+      <div className="h-4 bg-[repeating-linear-gradient(90deg,#e4572e_0_14px,#fffdf7_14px_28px)]" />
+      <p className="mt-2 text-center text-[10px] font-bold uppercase tracking-[0.3em] text-[#f4c430]">PLTL · Algebra</p>
+      <p className="mt-1 text-center text-lg font-black leading-tight text-[#f1efe6]">What&apos;s the<br />Damage?</p>
+      <div className="mx-3 mt-auto mb-3 rounded-t-sm bg-[#fffdf7] px-2 py-1.5 font-mono text-[10px] text-[#22201c]">
+        <p>2🌮 + 1🥤 = $8.50</p>
+        <p>1🌮 + 3🥤 = $8.00</p>
+      </div>
+    </div>
+  )
+}
+
+const ART = { cascade: CascadeArt, jeopardy: JeopardyArt, monopoly: MonopolyArt, escape: EscapeArt, imposter: ImposterArt, bakery: BakeryArt, patchknight: PatchKnightArt, organized: OrganizedArt, limitingsuspect: LimitingSuspectArt, whatsthedamage: WhatsTheDamageArt }
 
 export function GameBox({ game, picked, onPick }) {
   const Art = ART[game.id]

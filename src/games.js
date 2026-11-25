@@ -181,6 +181,27 @@ export const GAMES = [
     url: 'https://pltl-limiting-suspect.vercel.app/',
   },
   {
+    id: 'whatsthedamage',
+    shelf: 'math',
+    time: '20–45 min (4, 6 or 8 orders; the leader can set a clock)',
+    name: "What's the Damage?",
+    tagline: 'The food truck lost its menu. Solve the receipts!',
+    description:
+      "A food truck lost its menu board, but the old receipts survived (\"2 tacos + 1 agua fresca = $8.50\"). Every order is a system of equations with 2 or 3 unknown prices. Teams solve for the prices, then ring up a new customer's order: the damage. Every team gets its own generated orders.",
+    best: 'College algebra: systems of linear equations (2 and 3 variables), substitution and elimination',
+    subjects: 'Math (college algebra)',
+    teams: '1–8 teams (at least 1 student each)',
+    questions: 'Generated systems (no question bank): every team gets different numbers every game, always with exactly one solution',
+    howToPlay: [
+      'The leader opens the lobby and shows the join code. Students join on their phones and are put on teams; the leader picks 2 unknowns, 3 unknowns or a mix, how many orders (4, 6 or 8), and an optional clock.',
+      'Every order: the receipts are a system of equations. The team solves for every item\'s price (a button shows the receipts as x, y, z equations), then works out the total for a new customer: the damage.',
+      'One student is the lead solver and types each answer; the role rotates every step. Wrong prices are told which receipts they do and don\'t satisfy, like plugging the answer back in.',
+      'Wrong tries cost a quarter of a step\'s points; after three, the team can see the answer and move on for 0. Every phone has a calculator.',
+      "The projector shows every team's truck, with each order ticket stamped PAID as it's served. The results show every system with its answer, and an Excel download.",
+    ],
+    url: 'https://pltl-whats-the-damage.vercel.app/',
+  },
+  {
     id: 'patchknight',
     shelf: 'business-engineering',
     time: 'About 20–40 min (10, 15 or 20 bugs per student, at their own pace)',
@@ -209,6 +230,7 @@ export const SHELVES = [
   { id: 'any', title: 'Any subject', note: 'Use questions from any course in the shared bank', comingSoon: 0 },
   { id: 'biology', title: 'Biology', note: 'Built for biology questions', comingSoon: 0 },
   { id: 'chemistry', title: 'Chemistry', note: 'Built for chemistry skills', comingSoon: 0 },
+  { id: 'math', title: 'Math', note: 'Built for math skills', comingSoon: 0 },
   { id: 'business-engineering', title: 'Business & Engineering', note: 'Built for computer science, engineering and business', comingSoon: 0 },
 ]
 
