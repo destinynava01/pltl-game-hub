@@ -49,7 +49,7 @@ export const GAMES = [
       'A wrong system is a rejection: the card comes back and the vitals drop. After two misses a card shows a hint. At level 3, two-system organs can be placed in both for a bonus.',
       'The first patient rebuilt earns a finish bonus, plus the vitals left. The results show the answer key with the organs the class missed most, and an Excel download.',
     ],
-    url: 'https://pltl-organized-chaos.vercel.app/',
+    url: 'https://pltl-organ-ized-chaos.vercel.app/',
   },
   {
     id: 'monopoly',
