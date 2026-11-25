@@ -160,6 +160,27 @@ export const GAMES = [
     url: 'https://pltl-beaker-bakery.vercel.app/',
   },
   {
+    id: 'limitingsuspect',
+    shelf: 'chemistry',
+    time: '20–45 min (the leader sets a case clock, or none)',
+    name: 'Limiting Suspect',
+    tagline: 'A pharmacy break-in, solved with stoichiometry.',
+    description:
+      "Someone broke into the hospital pharmacy and a patient fell ill. Each team gets its own case (its own stolen medicine, suspects and numbers) and cracks it in four acts: balance the combustion equations, turn the residue's CO₂ and H₂O into moles to identify the medicine, convert prescription doses from mg to mmol to find the stolen bottle, and work out how much is missing to name the thief.",
+    best: 'Stoichiometry: balancing equations, moles and molar mass, mole ratios',
+    subjects: 'Chemistry',
+    teams: '1–8 teams (at least 1 student each)',
+    questions: 'Generated cases (no question bank): every team gets different numbers every game',
+    howToPlay: [
+      'The leader opens the lobby and shows the join code. Students join on their phones and are put on teams; the leader picks a case clock (20, 30 or 45 minutes, or none).',
+      "Every phone shows the team's case file. One student is the lead detective and types the answer for each clue; the role rotates every clue, so everyone leads.",
+      'Act 1: balance each medicine\'s combustion equation. Act 2: grams of CO₂ and H₂O to moles; the mole ratio identifies the medicine. Act 3: match patients\' doses (mg) to the pharmacy log (mmol); the leftover medicine was stolen. Act 4: how many mmol are missing? The thief\'s vial holds exactly that much.',
+      'Wrong tries cost a quarter of a clue\'s points; after three, the team can see the answer and move on for 0 points. Every phone has a calculator and a molar-mass reference card.',
+      "The projector is a corkboard of every team's case file, stamped as each clue is solved. The results show every team's whole case with the answers, and an Excel download.",
+    ],
+    url: 'https://pltl-limiting-suspect.vercel.app/',
+  },
+  {
     id: 'patchknight',
     shelf: 'business-engineering',
     time: 'About 20–40 min (10, 15 or 20 bugs per student, at their own pace)',

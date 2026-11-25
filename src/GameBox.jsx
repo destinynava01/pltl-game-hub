@@ -127,7 +127,20 @@ function OrganizedArt() {
   )
 }
 
-const ART = { cascade: CascadeArt, jeopardy: JeopardyArt, monopoly: MonopolyArt, escape: EscapeArt, imposter: ImposterArt, bakery: BakeryArt, patchknight: PatchKnightArt, organized: OrganizedArt }
+function LimitingSuspectArt() {
+  return (
+    <div className="relative flex h-full flex-col overflow-hidden bg-[#a8794f] bg-[radial-gradient(circle_at_20%_30%,rgb(0_0_0/0.12)_0_1.5px,transparent_2px)] bg-[length:14px_14px]">
+      <div className="relative mx-3 mt-4 rotate-[-3deg] rounded-sm bg-[#fbf5e6] px-2 py-2 text-center shadow-md">
+        <span className="absolute -top-1.5 left-1/2 h-3 w-3 -translate-x-1/2 rounded-full bg-[#c0392b]" />
+        <p className="text-[9px] font-bold uppercase tracking-[0.25em] text-[#6e5d47]">Case file</p>
+        <p className="font-mono text-base font-black leading-tight text-[#1f3a5f]">Limiting<br />Suspect</p>
+      </div>
+      <p className="mx-auto mt-auto mb-4 rotate-[-8deg] rounded border-2 border-[#c0392b] px-2 font-mono text-xs font-black uppercase tracking-widest text-[#c0392b]">Case closed</p>
+    </div>
+  )
+}
+
+const ART = { cascade: CascadeArt, jeopardy: JeopardyArt, monopoly: MonopolyArt, escape: EscapeArt, imposter: ImposterArt, bakery: BakeryArt, patchknight: PatchKnightArt, organized: OrganizedArt, limitingsuspect: LimitingSuspectArt }
 
 export function GameBox({ game, picked, onPick }) {
   const Art = ART[game.id]
