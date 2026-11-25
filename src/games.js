@@ -6,11 +6,17 @@
 //   howToPlay   the steps, in order
 //   subjects    which subjects the game has questions for
 //   shelf       which shelf it sits on (see SHELVES)
-//   time        about how long a game takes
+//   time        about how long a game takes (shown); minutes: [shortest, longest] (for the time filter)
+//   solo        a single student can play it (for the filter)
+//   source      where its questions come from: 'bank' (the shared question bank), 'own' (its own set, built in or
+//               submitted on its site) or 'generated' (new numbers every game)
 //   url         the game's main address (its leader lobby)
 export const GAMES = [
   {
     id: 'jeopardy',
+    minutes: [30, 45], // for the time filter
+    solo: false, // one student can play it alone
+    source: 'bank', // where its questions come from (see SOURCES)
     time: '30–45 min',
     shelf: 'biology',
     name: 'Jeopardy',
@@ -32,6 +38,9 @@ export const GAMES = [
   },
   {
     id: 'organized',
+    minutes: [15, 25], // for the time filter
+    solo: true, // one student can play it alone
+    source: 'own', // where its questions come from (see SOURCES)
     time: '15–25 min',
     shelf: 'biology',
     name: 'Organ-ized Chaos',
@@ -53,6 +62,9 @@ export const GAMES = [
   },
   {
     id: 'monopoly',
+    minutes: [45, 60], // for the time filter
+    solo: false, // one student can play it alone
+    source: 'bank', // where its questions come from (see SOURCES)
     time: '45–60 min (or end any time)',
     shelf: 'any',
     name: 'Monopoly',
@@ -76,6 +88,9 @@ export const GAMES = [
   },
   {
     id: 'escape',
+    minutes: [15, 30], // for the time filter
+    solo: true, // one student can play it alone
+    source: 'bank', // where its questions come from (see SOURCES)
     time: '15–30 min (more locks, longer)',
     shelf: 'any',
     name: 'Escape Room',
@@ -97,6 +112,9 @@ export const GAMES = [
   },
   {
     id: 'imposter',
+    minutes: [20, 40], // for the time filter
+    solo: false, // one student can play it alone
+    source: 'own', // where its questions come from (see SOURCES)
     time: 'About 5 min a round · 20–40 min',
     shelf: 'any',
     name: 'Imposter',
@@ -119,6 +137,9 @@ export const GAMES = [
   },
   {
     id: 'cascade',
+    minutes: [15, 30], // for the time filter
+    solo: true, // one student can play it alone
+    source: 'own', // where its questions come from (see SOURCES)
     shelf: 'any',
     time: '15–30 min',
     name: 'Cascade',
@@ -140,6 +161,9 @@ export const GAMES = [
   },
   {
     id: 'bakery',
+    minutes: [10, 45], // for the time filter
+    solo: true, // one student can play it alone
+    source: 'generated', // where its questions come from (see SOURCES)
     time: '10–45 min (you pick the shift)',
     shelf: 'chemistry',
     name: 'Beaker Bakery',
@@ -161,6 +185,9 @@ export const GAMES = [
   },
   {
     id: 'limitingsuspect',
+    minutes: [20, 45], // for the time filter
+    solo: true, // one student can play it alone
+    source: 'generated', // where its questions come from (see SOURCES)
     shelf: 'chemistry',
     time: '20–45 min (the leader sets a case clock, or none)',
     name: 'Limiting Suspect',
@@ -182,6 +209,9 @@ export const GAMES = [
   },
   {
     id: 'whatsthedamage',
+    minutes: [20, 45], // for the time filter
+    solo: true, // one student can play it alone
+    source: 'generated', // where its questions come from (see SOURCES)
     shelf: 'math',
     time: '20–45 min (4, 6 or 8 orders; the leader can set a clock)',
     name: "What's the Damage?",
@@ -203,6 +233,9 @@ export const GAMES = [
   },
   {
     id: 'patchknight',
+    minutes: [20, 40], // for the time filter
+    solo: true, // one student can play it alone
+    source: 'own', // where its questions come from (see SOURCES)
     shelf: 'business-engineering',
     time: 'About 20–40 min (10, 15 or 20 bugs per student, at their own pace)',
     name: 'Patch Knight',
@@ -224,17 +257,29 @@ export const GAMES = [
   },
 ]
 
-// The shelves, top to bottom. Games that work with any subject first, then shelves for one subject.
+// The shelves, top to bottom: games that work with any subject first, then one shelf per subject, A to Z.
 // comingSoon: empty "coming soon" spots on that shelf.
 export const SHELVES = [
   { id: 'any', title: 'Any subject', note: 'Use questions from any course in the shared bank', comingSoon: 0 },
   { id: 'biology', title: 'Biology', note: 'Built for biology questions', comingSoon: 0 },
+  { id: 'business-engineering', title: 'Business & Engineering', note: 'Built for computer science, engineering and business', comingSoon: 0 },
   { id: 'chemistry', title: 'Chemistry', note: 'Built for chemistry skills', comingSoon: 0 },
   { id: 'math', title: 'Math', note: 'Built for math skills', comingSoon: 0 },
-  { id: 'business-engineering', title: 'Business & Engineering', note: 'Built for computer science, engineering and business', comingSoon: 0 },
 ]
 
 // Every game in shelf order (the order the arrow keys move through)
 export const ORDERED = SHELVES.flatMap((shelf) => GAMES.filter((g) => g.shelf === shelf.id))
 
 export const link = (game, path = '') => new URL(path, game.url).toString()
+
+// The filters on the hub
+export const TIMES = [
+  { id: 'quick', label: '≤ 20 min', fits: (g) => g.minutes[0] <= 20 },
+  { id: 'class', label: '20–45 min', fits: (g) => g.minutes[0] <= 45 && g.minutes[1] >= 20 },
+  { id: 'long', label: '45 min +', fits: (g) => g.minutes[1] >= 45 },
+]
+export const SOURCES = [
+  { id: 'bank', label: 'Shared question bank' },
+  { id: 'own', label: 'Its own set' },
+  { id: 'generated', label: 'Generated fresh' },
+]
