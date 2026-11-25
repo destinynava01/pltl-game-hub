@@ -110,7 +110,24 @@ function CascadeArt() {
   )
 }
 
-const ART = { cascade: CascadeArt, jeopardy: JeopardyArt, monopoly: MonopolyArt, escape: EscapeArt, imposter: ImposterArt, bakery: BakeryArt, patchknight: PatchKnightArt }
+function OrganizedArt() {
+  return (
+    <div className="relative flex h-full flex-col overflow-hidden bg-[#e8f3f1]">
+      <p className="mt-3 text-center text-[10px] font-bold uppercase tracking-[0.3em] text-[#6d28d9]">PLTL · Body systems</p>
+      <p className="mt-1 text-center text-lg font-black leading-tight text-[#0f8b7d]">
+        <span className="inline-block -rotate-6">Organ</span>-<span className="inline-block rotate-3">ized</span><br /><span className="inline-block -rotate-2">Chaos</span>
+      </p>
+      <div className="mx-3 mt-auto mb-3 rounded-lg bg-[#071b1d] p-2">
+        <svg viewBox="0 0 120 30" className="w-full" aria-hidden="true">
+          <path d="M0 16 H30 L36 16 L41 5 L46 26 L51 2 L56 19 L60 16 H120" fill="none" stroke="#39ff8f" strokeWidth="2.5" strokeLinejoin="round" />
+        </svg>
+        <p className="text-center text-sm">🫀 🫁 🧠 🦴</p>
+      </div>
+    </div>
+  )
+}
+
+const ART = { cascade: CascadeArt, jeopardy: JeopardyArt, monopoly: MonopolyArt, escape: EscapeArt, imposter: ImposterArt, bakery: BakeryArt, patchknight: PatchKnightArt, organized: OrganizedArt }
 
 export function GameBox({ game, picked, onPick }) {
   const Art = ART[game.id]
