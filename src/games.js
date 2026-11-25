@@ -227,6 +227,7 @@ export const GAMES = [
       'Every order: the receipts are a system of equations. The team solves for every item\'s price (a button shows the receipts as x, y, z equations), then works out the total for a new customer: the damage.',
       'One student is the lead solver and types each answer; the role rotates every step. Wrong prices are told which receipts they do and don\'t satisfy, like plugging the answer back in.',
       'Wrong tries cost a quarter of a step\'s points; after three, the team can see the answer and move on for 0. Every phone has a calculator.',
+      'Jumpstart mode (for the Jumpstart sections): friendlier numbers, a worked first step on every order, a hint after one miss, and the answer after two.',
       "The projector shows every team's truck, with each order ticket stamped PAID as it's served. The results show every system with its answer, and an Excel download.",
     ],
     url: 'https://pltl-whats-the-damage.vercel.app/',
