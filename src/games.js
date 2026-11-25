@@ -149,10 +149,10 @@ export const GAMES = [
     best: 'Processes and procedures with a set order',
     subjects: 'Any subject',
     teams: '1–8 teams (3–6 students each works best)',
-    questions: 'Sequences of steps (starter sets included, plus your own)',
+    questions: 'Sequences of steps, filed under each professor\'s chapters (starter sets for every course, plus your own)',
     howToPlay: [
       'The leader hosts a game and shows the join code. Students join on their phones and are put on teams.',
-      'Pick a subject and the topics, then start. Each team gets a sequence, and its steps are dealt to the team\'s phones (some students may hold two cards).',
+      'Pick the course, the professor and the chapters (or, for subjects without chapters yet, the subject and topics), then start. Each team gets a sequence, and its steps are dealt to the team\'s phones (some students may hold two cards).',
       'Each phone only shows its own cards. The team talks it out, and whoever holds the next step taps it to play it.',
       'Right card: the chain grows. Wrong card: the chain collapses, everyone gets new cards, and the team starts that sequence over.',
       'Finishing a sequence earns 100 points (minus 15 per collapse) and brings the next one. Leaders can add their own sequences on the Submit page.',
@@ -193,7 +193,7 @@ export const GAMES = [
     name: 'Limiting Suspect',
     tagline: 'A pharmacy break-in, solved with stoichiometry.',
     description:
-      "Someone broke into the hospital pharmacy and a patient fell ill. Each team gets its own case (its own stolen medicine, suspects and numbers) and cracks it in four acts: balance the combustion equations, turn the residue's CO₂ and H₂O into moles to identify the medicine, convert prescription doses from mg to mmol to find the stolen bottle, and work out how much is missing to name the thief.",
+      "Someone broke into the hospital pharmacy and a patient fell ill. Each team gets its own case (its own stolen medicine, suspects and numbers) and cracks it in four acts: balance the crime lab's test reactions (single displacement, double displacement, strong acid + strong base), turn the residue's silver chloride precipitate into moles and a molar mass to identify the medicine, convert prescription doses from mg to mmol to find the stolen bottle, and work out how much is missing to name the thief.",
     best: 'Stoichiometry: balancing equations, moles and molar mass, mole ratios',
     subjects: 'Chemistry',
     teams: '1–8 teams (at least 1 student each)',
@@ -201,7 +201,7 @@ export const GAMES = [
     howToPlay: [
       'The leader opens the lobby and shows the join code. Students join on their phones and are put on teams; the leader picks a case clock (20, 30 or 45 minutes, or none).',
       "Every phone shows the team's case file. One student is the lead detective and types the answer for each clue; the role rotates every clue, so everyone leads.",
-      'Act 1: balance each medicine\'s combustion equation. Act 2: grams of CO₂ and H₂O to moles; the mole ratio identifies the medicine. Act 3: match patients\' doses (mg) to the pharmacy log (mmol); the leftover medicine was stolen. Act 4: how many mmol are missing? The thief\'s vial holds exactly that much.',
+      'Act 1: balance four lab tests (a single displacement, a double displacement, a strong acid with a strong base, and one more); each unlocks a medicine\'s molar mass. Act 2: the residue gives a silver chloride precipitate; grams of AgCl to moles, then grams of residue ÷ moles = molar mass, which identifies the medicine. Act 3: match patients\' doses (mg) to the pharmacy log (mmol); the leftover medicine was stolen. Act 4: how many mmol are missing? The thief\'s vial holds exactly that much.',
       'Wrong tries cost a quarter of a clue\'s points; after three, the team can see the answer and move on for 0 points. Every phone has a calculator and a molar-mass reference card.',
       "The projector is a corkboard of every team's case file, stamped as each clue is solved. The results show every team's whole case with the answers, and an Excel download.",
     ],
