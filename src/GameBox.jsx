@@ -96,7 +96,21 @@ function PatchKnightArt() {
   )
 }
 
-const ART = { jeopardy: JeopardyArt, monopoly: MonopolyArt, escape: EscapeArt, imposter: ImposterArt, bakery: BakeryArt, patchknight: PatchKnightArt }
+function CascadeArt() {
+  return (
+    <div className="relative flex h-full flex-col overflow-hidden bg-[#061a2b] bg-[repeating-linear-gradient(90deg,rgb(255_255_255/0.04)_0_2px,transparent_2px_14px)]">
+      <p className="mt-3 text-center text-[10px] font-bold uppercase tracking-[0.3em] text-[#7cc7ff]">PLTL · In order</p>
+      <p className="mt-1 text-center text-xl font-black tracking-wide text-[#3ee0d0] drop-shadow-[0_0_8px_rgb(62_224_208/0.6)]">Cascade</p>
+      <div className="mt-auto space-y-1 px-3 pb-3">
+        {['#3ee0d0', '#7cc7ff', '#ffd27a', '#ff9db0'].map((c, i) => (
+          <div key={c} className="h-4 w-3/5 rounded" style={{ marginLeft: `${i * 14}%`, background: c }} />
+        ))}
+      </div>
+    </div>
+  )
+}
+
+const ART = { cascade: CascadeArt, jeopardy: JeopardyArt, monopoly: MonopolyArt, escape: EscapeArt, imposter: ImposterArt, bakery: BakeryArt, patchknight: PatchKnightArt }
 
 export function GameBox({ game, picked, onPick }) {
   const Art = ART[game.id]

@@ -97,6 +97,27 @@ export const GAMES = [
     url: 'https://pltl-imposter.vercel.app/',
   },
   {
+    id: 'cascade',
+    shelf: 'any',
+    time: '15–30 min',
+    name: 'Cascade',
+    tagline: 'Every step sets off the next.',
+    description:
+      "Put a process in order as a team: the phases of mitosis, the steps of balancing an equation, a titration. Each step is a card dealt to someone's phone, and only they can see it. Talk it out and play the cards in order. One wrong card and the whole chain collapses: the cards are re-dealt and the team starts over.",
+    best: 'Processes and procedures with a set order',
+    subjects: 'Any subject',
+    teams: '1–8 teams (3–6 students each works best)',
+    questions: 'Sequences of steps (starter sets included, plus your own)',
+    howToPlay: [
+      'The leader hosts a game and shows the join code. Students join on their phones and are put on teams.',
+      'Pick a subject and the topics, then start. Each team gets a sequence, and its steps are dealt to the team\'s phones (some students may hold two cards).',
+      'Each phone only shows its own cards. The team talks it out, and whoever holds the next step taps it to play it.',
+      'Right card: the chain grows. Wrong card: the chain collapses, everyone gets new cards, and the team starts that sequence over.',
+      'Finishing a sequence earns 100 points (minus 15 per collapse) and brings the next one. Leaders can add their own sequences on the Submit page.',
+    ],
+    url: 'https://pltl-cascade.vercel.app/',
+  },
+  {
     id: 'bakery',
     time: '10–45 min (you pick the shift)',
     shelf: 'chemistry',
