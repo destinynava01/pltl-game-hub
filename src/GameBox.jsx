@@ -154,7 +154,21 @@ function WhatsTheDamageArt() {
   )
 }
 
-const ART = { cascade: CascadeArt, jeopardy: JeopardyArt, monopoly: MonopolyArt, escape: EscapeArt, imposter: ImposterArt, bakery: BakeryArt, patchknight: PatchKnightArt, organized: OrganizedArt, limitingsuspect: LimitingSuspectArt, whatsthedamage: WhatsTheDamageArt }
+function SpikeArt() {
+  return (
+    <div className="relative flex h-full flex-col overflow-hidden bg-[#0b1220] bg-[linear-gradient(rgb(34_211_238/0.08)_1px,transparent_1px),linear-gradient(90deg,rgb(34_211_238/0.08)_1px,transparent_1px)] bg-[length:12px_12px]">
+      <p className="mt-3 text-center text-[10px] font-bold uppercase tracking-[0.3em] text-[#facc15]">PLTL · Nervous system</p>
+      <p className="mt-1 text-center text-2xl font-black tracking-wide text-[#22d3ee] [text-shadow:0_0_10px_rgb(34_211_238/0.7)]">Spike</p>
+      <svg viewBox="0 0 120 50" className="mx-3 mt-auto mb-3" aria-hidden="true">
+        <line x1="0" x2="120" y1="38" y2="38" stroke="#93a3bd" strokeOpacity="0.4" strokeWidth="1" />
+        <path d="M0 38 H34 L42 31 L48 6 L56 44 L62 40 H120" fill="none" stroke="#22d3ee" strokeWidth="2.5" strokeLinejoin="round" />
+        <circle cx="48" cy="6" r="2.5" fill="#facc15" />
+      </svg>
+    </div>
+  )
+}
+
+const ART = { cascade: CascadeArt, jeopardy: JeopardyArt, monopoly: MonopolyArt, escape: EscapeArt, imposter: ImposterArt, bakery: BakeryArt, patchknight: PatchKnightArt, organized: OrganizedArt, limitingsuspect: LimitingSuspectArt, whatsthedamage: WhatsTheDamageArt, spike: SpikeArt }
 
 export function GameBox({ game, picked, onPick }) {
   const Art = ART[game.id]

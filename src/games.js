@@ -61,6 +61,30 @@ export const GAMES = [
     url: 'https://pltl-organ-ized-chaos.vercel.app/',
   },
   {
+    id: 'spike',
+    minutes: [20, 40], // for the time filter
+    solo: true, // one student can play it alone
+    source: 'own', // where its questions come from (see SOURCES)
+    time: '20–40 min (depends on the rounds picked)',
+    shelf: 'biology',
+    name: 'Spike',
+    tagline: 'Fire a neuron, one decision at a time.',
+    description:
+      "A neuron's voltage is drawn live on the projector. At every moment of an action potential, teams decide what happens: which channels open, which way the ions move, what the voltage does. Each right call draws the next stretch of the team's trace. Then the signal crosses a synapse, and a toxin gets in the way.",
+    best: 'A&P nervous tissue: the action potential, refractory periods, synapses',
+    subjects: 'Biology (anatomy & physiology)',
+    teams: '1–8 teams (at least 1 student each)',
+    questions: 'Built in: five rounds, with the choices shuffled and the numbers and synapse example different for every team',
+    howToPlay: [
+      'The leader opens the lobby and shows the join code. Students join on their phones and are put on teams.',
+      'Pick the rounds your section has covered (Fire it, Big enough?, Too soon?, Myelin race, Across the synapse) and an optional clock, then start.',
+      "Every phone shows the team's scope and the current question. One student is the lead and locks in the pick; the role rotates every step.",
+      'A right pick draws the next part of the trace (or the next link of the synapse chain) and adds the answer, with the reason, to the team\'s notes. Wrong picks cost a quarter of the step\'s 50 points; after two, the team can see the answer.',
+      "The projector shows every team's scope live. The leader can peek at any team's step and tries. The results show every team's whole run, and an Excel download.",
+    ],
+    url: 'https://pltl-spike.vercel.app/',
+  },
+  {
     id: 'monopoly',
     minutes: [45, 60], // for the time filter
     solo: false, // one student can play it alone
