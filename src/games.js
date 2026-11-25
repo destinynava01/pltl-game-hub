@@ -84,7 +84,7 @@ export const GAMES = [
       'Each crew gets a secret term, except one student: the alien, who only sees the chapter. Everyone gives one clue out loud, then the crew votes. Students have to explain a concept well enough to prove they know it, without giving it away.',
     best: 'Explaining concepts and vocabulary out loud',
     subjects: 'Any subject',
-    teams: 'Groups of 4–8 (at least 3 each)',
+    teams: '1 or more groups of 4–8 (at least 3 to play)',
     questions: 'Its own term bank (+ optional multiple-choice answers)',
     howToPlay: [
       'The leader hosts a game and shows the join code. Students join on their phones and are put into crews (groups).',
