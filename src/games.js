@@ -101,7 +101,7 @@ export const GAMES = [
     teams: '1–8 teams (at least 1 student each)',
     questions: 'Generated: every team gets its own family trees and numbers every game (each tree has one clear pattern)',
     howToPlay: [
-      "The leader opens the lobby and shows the join code. Students join on their phones and are put on teams; the leader picks the rounds (Royal crosses, Read the bloodline, Who carries it?, The heir's odds, and the optional Beyond Mendel) and an optional clock.",
+      "The leader opens the lobby and shows the join code. Students join on their phones and are put on teams; the leader picks the rounds (Royal crosses, Read the bloodline, Who carries it?, The heir's odds, and Beyond Mendel) and an optional clock.",
       "Every phone shows the team's question and, when there is one, the family tree. One student is the lead genealogist and sends the answer; the role rotates every step.",
       'Read the bloodline: name the pattern from the tree. A wrong pick says which family member rules it out. Who carries it? and The heir\'s odds follow the team\'s own house: genotypes (with "can\'t tell" when the tree doesn\'t decide) and probabilities typed as a fraction, decimal or percent.',
       "Wrong tries cost a quarter of a step's 50 points; after three, the team can see the answer and move on for 0. Every answer goes into the team's notes, with Punnett squares filled in.",
@@ -278,7 +278,7 @@ export const GAMES = [
     teams: '1–8 teams (at least 1 student each)',
     questions: 'Built in: about 60 molecules and ions, drawn at random for every team (the best Lewis structure is worked out by formal charges)',
     howToPlay: [
-      'The leader opens the lobby and shows the join code. Students join on their phones and are put on teams; the leader picks the rounds (The deposit, Move-in day, House rules, Floor plan, and the optional Blanket hog) and an optional clock.',
+      'The leader opens the lobby and shows the join code. Students join on their phones and are put on teams; the leader picks the rounds (The deposit, Move-in day, House rules, Floor plan, and Blanket hog) and an optional clock.',
       "Every phone shows the team's applicant. One student is the lead leasing agent and sends the answer; the role rotates every step.",
       'Move-in day: build the Lewis structure by tapping bonds (single, double, triple) and setting lone pairs, with a live electron counter. Wrong tries say what is off: over the deposit, an atom without its 8, or formal charges that could be better. Any equivalent resonance structure counts.',
       "Wrong tries cost a quarter of a step's 50 points; after three, the team can see the answer and move on for 0. Every answer goes into the team's notes with the Lewis structure and a 3D floor plan.",
@@ -303,7 +303,7 @@ export const GAMES = [
     teams: '1–8 teams (at least 1 student each)',
     questions: 'Generated: every team gets its own fish, acids, buffers and titration every game',
     howToPlay: [
-      'The leader opens the lobby and shows the join code. Students join on their phones and are put on teams; the leader picks the rounds (Test the water, Weak acids, Buffer the tank, Titrate a sample, and the optional Salts) and an optional clock.',
+      'The leader opens the lobby and shows the join code. Students join on their phones and are put on teams; the leader picks the rounds (Test the water, Weak acids, Buffer the tank, Titrate a sample, and Salts) and an optional clock.',
       "Every phone shows the team's question. One student is the lead keeper and sends the answer (numbers like 4.75 or 1.8e-5); the role rotates every step.",
       'Common slips get their own feedback: giving the pOH instead of the pH, a buffer ratio upside down, forgetting Ca(OH)₂ gives two OH⁻, treating a weak acid as strong, or pH 7 at a weak-acid equivalence point.',
       "Wrong tries cost a quarter of a step's 50 points; after three, the team can see the answer and move on for 0 (and no fish). Every answer goes into the team's notes with the reason.",
@@ -328,7 +328,7 @@ export const GAMES = [
     teams: '1–8 teams (at least 1 student each)',
     questions: 'Generated: every team gets its own functions every game',
     howToPlay: [
-      'The leader opens the lobby and shows the join code. Students join on their phones and are put on teams; the leader picks the belts (white through purple, and the optional brown and black) and an optional clock.',
+      'The leader opens the lobby and shows the join code. Students join on their phones and are put on teams; the leader picks the belts (white through purple, and brown and black) and an optional clock.',
       "Every phone shows the team's function. One student is the lead fighter and types the derivative (like 6x^2 + cos(x)); a preview writes it out so typos are easy to catch. The role rotates every step.",
       'Answers are checked at several x values, so any equivalent form counts. Common slips get their own feedback: the product of the derivatives, the quotient rule switched, a missing inner derivative, a sign on cos x.',
       "Wrong tries cost a quarter of a step's 50 points; after three, the team can see the answer and move on for 0 (and no board). Every answer goes into the team's notes with the reason.",
@@ -404,7 +404,7 @@ export const GAMES = [
     teams: '1–8 teams (at least 1 student each)',
     questions: 'Generated: every team gets its own numbers every game, each with its drawing',
     howToPlay: [
-      'The leader opens the lobby and shows the join code. Students join on their phones and are put on teams; the leader picks the rounds (Plan it, Hoist the supplies, Levers and loads, Build the platform, The roof truss, and the optional Balance the sign) and an optional clock.',
+      'The leader opens the lobby and shows the join code. Students join on their phones and are put on teams; the leader picks the rounds (Plan it, Hoist the supplies, Levers and loads, Build the platform, The roof truss, and Balance the sign) and an optional clock.',
       "Every phone shows the team's problem with its drawing. One student is the lead builder and sends the answer (a number, with a sign where the problem asks for a direction); the role rotates every step.",
       'Common slips get their own feedback: the other support\'s reaction, F d instead of F d sinθ, a distributed load placed at the tip, a hole added instead of subtracted, the wrong sign.',
       "Wrong tries cost a quarter of a step's 50 points; after three, the team can see the answer and move on for 0 (and no piece). Every answer goes into the team's notes with the reason.",
