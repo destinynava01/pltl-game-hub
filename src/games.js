@@ -363,6 +363,31 @@ export const GAMES = [
     url: 'https://pltl-mural-crew.vercel.app/',
   },
   {
+    id: 'treehousebuilders',
+    paper: 'for free-body diagrams, and a calculator with trig', // shown as a "Bring paper" warning
+    minutes: [25, 45], // for the time filter
+    solo: true, // one student can play it alone
+    source: 'generated', // where its questions come from (see SOURCES)
+    shelf: 'business-engineering',
+    time: '25–45 min (depends on the rounds picked; the leader can set a clock)',
+    name: 'Treehouse Builders',
+    tagline: 'Will It Hold? Build it right, and it stands.',
+    description:
+      "Every team builds a treehouse, and every problem comes with a drawing: planks with their supports and loads, ropes and their angles, a crank, a roof truss. Teams plan with free-body diagrams, find rope tensions, moments, plank and cantilever reactions, and truss member forces. Every right answer adds a piece to the team's treehouse on the projector.",
+    best: 'Statics: free-body diagrams and supports, particle equilibrium, moments, rigid-body equilibrium (beams and cantilevers), trusses by joints, zero-force members, composite centroids (Hibbeler Ch 3–6, 9)',
+    subjects: 'Engineering (Statics)',
+    teams: '1–8 teams (at least 1 student each)',
+    questions: 'Generated: every team gets its own numbers every game, each with its drawing',
+    howToPlay: [
+      'The leader opens the lobby and shows the join code. Students join on their phones and are put on teams; the leader picks the rounds (Plan it, Hoist the supplies, Levers and loads, Build the platform, The roof truss, and the optional Balance the sign) and an optional clock.',
+      "Every phone shows the team's problem with its drawing. One student is the lead builder and sends the answer (a number, with a sign where the problem asks for a direction); the role rotates every step.",
+      'Common slips get their own feedback: the other support\'s reaction, F d instead of F d sinθ, a distributed load placed at the tip, a hole added instead of subtracted, the wrong sign.',
+      "Wrong tries cost a quarter of a step's 50 points; after three, the team can see the answer and move on for 0 (and no piece). Every answer goes into the team's notes with the reason.",
+      "The projector shows every team's treehouse growing a piece at a time. The leader can peek at any team (with the drawing), report a problem, and download the results.",
+    ],
+    url: 'https://pltl-treehouse-builders.vercel.app/',
+  },
+  {
     id: 'patchknight',
     minutes: [20, 40], // for the time filter
     solo: true, // one student can play it alone

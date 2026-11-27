@@ -254,7 +254,27 @@ function ReefKeeperArt() {
   )
 }
 
-const ART = { cascade: CascadeArt, jeopardy: JeopardyArt, monopoly: MonopolyArt, escape: EscapeArt, imposter: ImposterArt, bakery: BakeryArt, patchknight: PatchKnightArt, organized: OrganizedArt, limitingsuspect: LimitingSuspectArt, whatsthedamage: WhatsTheDamageArt, spike: SpikeArt, muralcrew: MuralCrewArt, roommatefinder: RoommateFinderArt, royalbloodlines: RoyalBloodlinesArt, reefkeeper: ReefKeeperArt }
+function TreehouseArt() {
+  return (
+    <div className="relative flex h-full flex-col overflow-hidden bg-[#dcebcf] bg-[radial-gradient(ellipse_at_20%_-10%,rgb(255_244_200/0.9),transparent_55%)]">
+      <p className="mt-3 text-center text-[10px] font-bold uppercase tracking-[0.3em] text-[#7c4a1e]">PLTL · Engineering</p>
+      <p className="mt-1 text-center text-xl font-black leading-tight text-[#2f7d32]">Treehouse Builders</p>
+      <svg viewBox="0 0 120 80" className="mx-3 mt-auto mb-3 rounded-md" aria-hidden="true">
+        <rect width="120" height="80" rx="6" fill="#bfe3f7" />
+        <path d="M0 72 Q 40 66 120 70 L120 80 L0 80 Z" fill="#7cb342" />
+        <rect x="56" y="30" width="10" height="44" rx="3" fill="#7c4a1e" />
+        <g fill="#3f7d20"><circle cx="61" cy="22" r="18" /><circle cx="42" cy="30" r="12" /><circle cx="80" cy="30" r="12" /></g>
+        <rect x="38" y="44" width="46" height="4" fill="#b7793e" />
+        <rect x="46" y="32" width="30" height="12" fill="#d9a066" stroke="#7c4a1e" strokeWidth="0.8" />
+        <polygon points="42,33 61,20 80,33" fill="#2563eb" />
+        <g stroke="#b7793e" strokeWidth="1.2"><line x1="44" y1="72" x2="47" y2="48" /><line x1="50" y1="72" x2="53" y2="48" />{[66, 60, 54].map((y) => <line key={y} x1="45" y1={y} x2="51" y2={y} />)}</g>
+        <line x1="90" y1="14" x2="90" y2="40" stroke="#dc2626" strokeWidth="1.5" /><polygon points="87,38 93,38 90,44" fill="#dc2626" />
+      </svg>
+    </div>
+  )
+}
+
+const ART = { cascade: CascadeArt, jeopardy: JeopardyArt, monopoly: MonopolyArt, escape: EscapeArt, imposter: ImposterArt, bakery: BakeryArt, patchknight: PatchKnightArt, organized: OrganizedArt, limitingsuspect: LimitingSuspectArt, whatsthedamage: WhatsTheDamageArt, spike: SpikeArt, muralcrew: MuralCrewArt, roommatefinder: RoommateFinderArt, royalbloodlines: RoyalBloodlinesArt, reefkeeper: ReefKeeperArt, treehousebuilders: TreehouseArt }
 
 export function GameBox({ game, picked, onPick }) {
   // A game without its own cover still gets a plain box (a missing cover must not blank the whole hub)
