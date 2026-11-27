@@ -203,7 +203,32 @@ function RoommateFinderArt() {
   )
 }
 
-const ART = { cascade: CascadeArt, jeopardy: JeopardyArt, monopoly: MonopolyArt, escape: EscapeArt, imposter: ImposterArt, bakery: BakeryArt, patchknight: PatchKnightArt, organized: OrganizedArt, limitingsuspect: LimitingSuspectArt, whatsthedamage: WhatsTheDamageArt, spike: SpikeArt, muralcrew: MuralCrewArt, roommatefinder: RoommateFinderArt }
+function RoyalBloodlinesArt() {
+  return (
+    <div className="relative flex h-full flex-col overflow-hidden bg-[#1c0b14] bg-[radial-gradient(ellipse_at_50%_-10%,rgb(232_182_76/0.25),transparent_60%)]">
+      <p className="mt-3 text-center text-[10px] font-bold uppercase tracking-[0.3em] text-[#f6d98b]">PLTL · Biology</p>
+      <p className="mt-1 text-center font-serif text-xl font-black leading-tight text-[#e8b64c]">Royal Bloodlines</p>
+      <svg viewBox="0 0 120 80" className="mx-3 mt-auto mb-3 rounded-md bg-[#f8efd9]" aria-hidden="true">
+        <g stroke="#3b2414" strokeWidth="1.6" fill="none">
+          <line x1="52" y1="16" x2="68" y2="16" /><line x1="60" y1="16" x2="60" y2="36" /><line x1="24" y1="36" x2="96" y2="36" />
+          <line x1="24" y1="36" x2="24" y2="46" /><line x1="60" y1="36" x2="60" y2="46" /><line x1="96" y1="36" x2="96" y2="46" />
+          <line x1="68" y1="52" x2="80" y2="52" /><line x1="74" y1="52" x2="74" y2="64" /><line x1="66" y1="64" x2="84" y2="64" />
+          <line x1="66" y1="64" x2="66" y2="68" /><line x1="84" y1="64" x2="84" y2="68" />
+        </g>
+        <rect x="40" y="10" width="12" height="12" fill="#fff" stroke="#3b2414" strokeWidth="1.6" />
+        <circle cx="74" cy="16" r="6" fill="#fff" stroke="#3b2414" strokeWidth="1.6" />
+        <rect x="18" y="46" width="12" height="12" fill="#6b1d2f" stroke="#3b2414" strokeWidth="1.6" />
+        <circle cx="60" cy="52" r="6" fill="#fff" stroke="#3b2414" strokeWidth="1.6" /><circle cx="60" cy="52" r="2" fill="#6b1d2f" />
+        <rect x="80" y="46" width="12" height="12" fill="#fff" stroke="#3b2414" strokeWidth="1.6" />
+        <rect x="60" y="68" width="12" height="10" fill="#6b1d2f" stroke="#3b2414" strokeWidth="1.6" />
+        <circle cx="84" cy="73" r="5" fill="#fff" stroke="#3b2414" strokeWidth="1.6" />
+        <text x="60" y="8" textAnchor="middle" fontSize="8">👑</text>
+      </svg>
+    </div>
+  )
+}
+
+const ART = { cascade: CascadeArt, jeopardy: JeopardyArt, monopoly: MonopolyArt, escape: EscapeArt, imposter: ImposterArt, bakery: BakeryArt, patchknight: PatchKnightArt, organized: OrganizedArt, limitingsuspect: LimitingSuspectArt, whatsthedamage: WhatsTheDamageArt, spike: SpikeArt, muralcrew: MuralCrewArt, roommatefinder: RoommateFinderArt, royalbloodlines: RoyalBloodlinesArt }
 
 export function GameBox({ game, picked, onPick }) {
   // A game without its own cover still gets a plain box (a missing cover must not blank the whole hub)
@@ -220,7 +245,10 @@ export function GameBox({ game, picked, onPick }) {
           : 'border-black/40 opacity-80 hover:-translate-y-1 hover:opacity-100'
       }`}
     >
-      {Art ? <Art /> : <div className="flex h-full items-center justify-center bg-dusk p-3 text-center text-xl font-black">{game.name}</div>}
+      <span className="relative block h-full">
+        {Art ? <Art /> : <div className="flex h-full items-center justify-center bg-dusk p-3 text-center text-xl font-black">{game.name}</div>}
+        {game.paper && <span className="absolute bottom-1.5 right-1.5 rounded-md bg-black/70 px-1.5 py-0.5 text-xs font-bold text-white" title="Bring paper">📝</span>}
+      </span>
     </button>
   )
 }

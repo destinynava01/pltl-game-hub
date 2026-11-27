@@ -129,6 +129,12 @@ export default function App() {
           <li className="rounded-full border border-line px-3 py-1 text-muted">❓ {game.questions}</li>
         </ul>
 
+        {game.paper && (
+          <p className="mt-3 rounded-xl border-2 border-dashed border-glow/70 bg-night/60 px-4 py-2 text-sm">
+            <b className="text-glow">📝 Bring paper:</b> students will want scratch paper {game.paper}.
+          </p>
+        )}
+
         <h3 className="mt-6 font-display text-sm uppercase tracking-widest text-glow">How to play</h3>
         <ol className="mt-2 space-y-2">
           {game.howToPlay.map((step, i) => (

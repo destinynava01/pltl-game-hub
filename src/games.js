@@ -85,6 +85,31 @@ export const GAMES = [
     url: 'https://pltl-spike.vercel.app/',
   },
   {
+    id: 'royalbloodlines',
+    paper: 'for Punnett squares and working out the odds', // shown as a "Bring paper" warning
+    minutes: [25, 45], // for the time filter
+    solo: true, // one student can play it alone
+    source: 'generated', // where its questions come from (see SOURCES)
+    shelf: 'biology',
+    time: '25–45 min (depends on the rounds picked; the leader can set a clock)',
+    name: 'Royal Bloodlines',
+    tagline: 'Trace the hidden trait through the royal family.',
+    description:
+      "Pedigree Detective. Every team is a team of court genealogists with its own royal house and a made-up trait running through the family. Teams cross nobles with Punnett squares, read family trees to name the pattern (autosomal or X-linked, dominant or recessive, or mitochondrial), find the carriers, and work out the heir's odds. The team's family tree fills in on the projector as it goes.",
+    best: 'General Biology genetics: Punnett squares, testcrosses, pedigrees, sex linkage, carriers, probability (Ermolinsky Ch 12–13, Carreon Unit 3)',
+    subjects: 'Biology (general biology)',
+    teams: '1–8 teams (at least 1 student each)',
+    questions: 'Generated: every team gets its own family trees and numbers every game (each tree has one clear pattern)',
+    howToPlay: [
+      "The leader opens the lobby and shows the join code. Students join on their phones and are put on teams; the leader picks the rounds (Royal crosses, Read the bloodline, Who carries it?, The heir's odds, and the optional Beyond Mendel) and an optional clock.",
+      "Every phone shows the team's question and, when there is one, the family tree. One student is the lead genealogist and sends the answer; the role rotates every step.",
+      'Read the bloodline: name the pattern from the tree. A wrong pick says which family member rules it out. Who carries it? and The heir\'s odds follow the team\'s own house: genotypes (with "can\'t tell" when the tree doesn\'t decide) and probabilities typed as a fraction, decimal or percent.',
+      "Wrong tries cost a quarter of a step's 50 points; after three, the team can see the answer and move on for 0. Every answer goes into the team's notes, with Punnett squares filled in.",
+      "The projector shows every team's family tree, with the pattern stamped on and genotypes written in as the team finds them. The leader can peek at any team, report a problem, and download the results.",
+    ],
+    url: 'https://pltl-royal-bloodlines.vercel.app/',
+  },
+  {
     id: 'monopoly',
     minutes: [45, 60], // for the time filter
     solo: false, // one student can play it alone
@@ -187,6 +212,7 @@ export const GAMES = [
   },
   {
     id: 'bakery',
+    paper: 'for the conversion chains and sig-fig math', // shown as a "Bring paper" warning
     minutes: [10, 45], // for the time filter
     solo: true, // one student can play it alone
     source: 'generated', // where its questions come from (see SOURCES)
@@ -212,6 +238,7 @@ export const GAMES = [
   },
   {
     id: 'limitingsuspect',
+    paper: 'for stoichiometry: balancing, mole math and limiting reactants', // shown as a "Bring paper" warning
     minutes: [20, 45], // for the time filter
     solo: true, // one student can play it alone
     source: 'generated', // where its questions come from (see SOURCES)
@@ -236,6 +263,7 @@ export const GAMES = [
   },
   {
     id: 'roommatefinder',
+    paper: 'for drawing Lewis structures (the Floor plan round asks for the shape without showing the structure)', // shown as a "Bring paper" warning
     minutes: [25, 45], // for the time filter
     solo: true, // one student can play it alone
     source: 'generated', // where its questions come from (see SOURCES)
@@ -260,6 +288,7 @@ export const GAMES = [
   },
   {
     id: 'whatsthedamage',
+    paper: 'for solving the systems of equations by hand', // shown as a "Bring paper" warning
     minutes: [20, 45], // for the time filter
     solo: true, // one student can play it alone
     source: 'generated', // where its questions come from (see SOURCES)
@@ -285,6 +314,7 @@ export const GAMES = [
   },
   {
     id: 'muralcrew',
+    paper: 'for sketching pieces and working out rates of change and inverses', // shown as a "Bring paper" warning
     minutes: [25, 45], // for the time filter
     solo: true, // one student can play it alone
     source: 'generated', // where its questions come from (see SOURCES)
