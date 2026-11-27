@@ -295,7 +295,28 @@ function DojoArt() {
   )
 }
 
-const ART = { cascade: CascadeArt, jeopardy: JeopardyArt, monopoly: MonopolyArt, escape: EscapeArt, imposter: ImposterArt, bakery: BakeryArt, patchknight: PatchKnightArt, organized: OrganizedArt, limitingsuspect: LimitingSuspectArt, whatsthedamage: WhatsTheDamageArt, spike: SpikeArt, muralcrew: MuralCrewArt, roommatefinder: RoommateFinderArt, royalbloodlines: RoyalBloodlinesArt, reefkeeper: ReefKeeperArt, treehousebuilders: TreehouseArt, derivativedojo: DojoArt }
+function AuditorArt() {
+  return (
+    <div className="relative flex h-full flex-col overflow-hidden bg-[#eef2f7] bg-[repeating-linear-gradient(transparent_0_15px,rgb(59_130_246/0.15)_15px_16px)]">
+      <p className="mt-3 text-center text-[10px] font-bold uppercase tracking-[0.3em] text-[#b91c1c]">PLTL · Accounting</p>
+      <p className="mt-1 text-center text-xl font-black leading-tight text-[#1d4ed8]">The Auditor Is Coming</p>
+      <svg viewBox="0 0 120 80" className="mx-3 mt-auto mb-3 rounded-md" aria-hidden="true">
+        <rect width="120" height="80" rx="6" fill="#dbeafe" />
+        <rect y="62" width="120" height="18" fill="#475569" />
+        {[6, 26, 46].map((x) => <rect key={x} x={x} y="70" width="10" height="1.5" fill="#f8fafc" />)}
+        <rect x="68" y="22" width="34" height="40" fill="#e2e8f0" stroke="#64748b" />
+        <rect x="66" y="18" width="38" height="5" fill="#1d4ed8" />
+        {[0, 1].map((r) => [0, 1, 2].map((c) => <rect key={`${r}${c}`} x={72 + c * 10} y={27 + r * 10} width="6" height="5" fill="#fde68a" stroke="#64748b" strokeWidth="0.4" />))}
+        <rect x="82" y="50" width="6" height="12" fill="#334155" />
+        {[0, 1, 2, 3, 4].map((i) => <rect key={i} x="105" y={58 - i * 2} width="12" height="2" fill="#fcd34d" stroke="#a16207" strokeWidth="0.3" />)}
+        <g transform="translate(22 52)"><rect y="3" width="22" height="7" rx="2" fill="#111827" /><path d="M4 3 L7 -1 L16 -1 L19 3 Z" fill="#111827" /><circle cx="5" cy="10.5" r="2.5" fill="#1f2937" stroke="#9ca3af" /><circle cx="17" cy="10.5" r="2.5" fill="#1f2937" stroke="#9ca3af" /></g>
+        <g transform="rotate(-10 40 20)"><rect x="14" y="12" width="46" height="13" rx="2" fill="none" stroke="#b91c1c" strokeWidth="1.8" /><text x="37" y="21.5" textAnchor="middle" fontSize="8" fontWeight="800" fill="#b91c1c">APPROVED</text></g>
+      </svg>
+    </div>
+  )
+}
+
+const ART = { cascade: CascadeArt, jeopardy: JeopardyArt, monopoly: MonopolyArt, escape: EscapeArt, imposter: ImposterArt, bakery: BakeryArt, patchknight: PatchKnightArt, organized: OrganizedArt, limitingsuspect: LimitingSuspectArt, whatsthedamage: WhatsTheDamageArt, spike: SpikeArt, muralcrew: MuralCrewArt, roommatefinder: RoommateFinderArt, royalbloodlines: RoyalBloodlinesArt, reefkeeper: ReefKeeperArt, treehousebuilders: TreehouseArt, derivativedojo: DojoArt, auditoriscoming: AuditorArt }
 
 export function GameBox({ game, picked, onPick }) {
   // A game without its own cover still gets a plain box (a missing cover must not blank the whole hub)

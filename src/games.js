@@ -413,6 +413,31 @@ export const GAMES = [
     url: 'https://pltl-treehouse-builders.vercel.app/',
   },
   {
+    id: 'auditoriscoming',
+    paper: 'and a calculator', // shown as a "Bring paper" warning
+    minutes: [25, 45], // for the time filter
+    solo: true, // one student can play it alone
+    source: 'generated', // where its questions come from (see SOURCES)
+    shelf: 'business-engineering',
+    time: '25–45 min (depends on the rounds picked; the leader can set a clock)',
+    name: 'The Auditor Is Coming',
+    tagline: 'Close the books before the auditor walks in.',
+    description:
+      "It's month-end, and every team keeps the books for its own small business. Teams spot the kind of adjustment, work out the amount, write the journal entry (debit, credit, amount), figure out what a forgotten entry does to the statements, and close the books. Every right answer stamps a document APPROVED, and the auditor's car gets closer on the projector.",
+    best: 'Intro to Financial Accounting: adjusting entries (prepaid expenses, unearned revenue, accrued expenses and revenue, depreciation), their effect on the statements, adjusted balances and book value',
+    subjects: 'Business (Accounting)',
+    teams: '1–8 teams (at least 1 student each)',
+    questions: 'Generated: every team gets its own company, month and numbers every game',
+    howToPlay: [
+      'The leader opens the lobby and shows the join code. Students join on their phones and are put on teams; the leader picks the rounds (Spot the adjustment, Run the numbers, Write the entry, What if we forgot?, and Close the books) and an optional clock.',
+      "Every phone shows the team's situation. One student is the lead bookkeeper and sends the answer (a kind of adjustment, a dollar amount, or a journal entry: debit account, credit account and amount); the role rotates every step.",
+      'Common slips get their own feedback: a whole year instead of one month, the whole prepayment instead of the part used, debit and credit switched, accumulated depreciation instead of book value.',
+      "Wrong tries cost a quarter of a step's 50 points; after three, the team can see the answer and move on for 0 (and no stamp). Every answer goes into the team's notes with the reason.",
+      "The projector shows every team's office: a stack of approved folders, and the auditor's car driving in as the clock runs (or creeping closer with every wrong entry when there's no clock). The leader can peek at any team, report a problem, and download the results.",
+    ],
+    url: 'https://pltl-auditor-is-coming.vercel.app/',
+  },
+  {
     id: 'patchknight',
     minutes: [20, 40], // for the time filter
     solo: true, // one student can play it alone
