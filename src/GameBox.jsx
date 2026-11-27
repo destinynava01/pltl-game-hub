@@ -168,9 +168,28 @@ function SpikeArt() {
   )
 }
 
-const ART = { cascade: CascadeArt, jeopardy: JeopardyArt, monopoly: MonopolyArt, escape: EscapeArt, imposter: ImposterArt, bakery: BakeryArt, patchknight: PatchKnightArt, organized: OrganizedArt, limitingsuspect: LimitingSuspectArt, whatsthedamage: WhatsTheDamageArt, spike: SpikeArt }
+function MuralCrewArt() {
+  return (
+    <div className="relative flex h-full flex-col overflow-hidden bg-[linear-gradient(#2e1a55,#9d3c72_60%,#f97366)]">
+      <p className="mt-3 text-center text-[10px] font-bold uppercase tracking-[0.3em] text-[#fde047]">PLTL · College Algebra</p>
+      <p className="mt-1 -rotate-2 text-center text-2xl font-black tracking-wide text-[#f472b6] [text-shadow:2px_2px_0_#1a0d16]">Mural Crew</p>
+      <svg viewBox="0 0 120 70" className="mt-auto" aria-hidden="true">
+        <rect x="0" y="34" width="16" height="36" fill="#251a3b" /><rect x="18" y="22" width="20" height="48" fill="#1d1530" />
+        <rect x="40" y="40" width="14" height="30" fill="#251a3b" /><rect x="56" y="16" width="22" height="54" fill="#1d1530" />
+        <rect x="80" y="30" width="18" height="40" fill="#251a3b" /><rect x="100" y="24" width="20" height="46" fill="#1d1530" />
+        <path d="M8 14 Q30 66 52 14" fill="none" stroke="#1a0d16" strokeWidth="5" strokeLinecap="round" />
+        <path d="M8 14 Q30 66 52 14" fill="none" stroke="#22d3ee" strokeWidth="3" strokeLinecap="round" />
+        <path d="M66 58 C72 30 92 30 112 26" fill="none" stroke="#1a0d16" strokeWidth="5" strokeLinecap="round" />
+        <path d="M66 58 C72 30 92 30 112 26" fill="none" stroke="#a3e635" strokeWidth="3" strokeLinecap="round" />
+      </svg>
+    </div>
+  )
+}
+
+const ART = { cascade: CascadeArt, jeopardy: JeopardyArt, monopoly: MonopolyArt, escape: EscapeArt, imposter: ImposterArt, bakery: BakeryArt, patchknight: PatchKnightArt, organized: OrganizedArt, limitingsuspect: LimitingSuspectArt, whatsthedamage: WhatsTheDamageArt, spike: SpikeArt, muralcrew: MuralCrewArt }
 
 export function GameBox({ game, picked, onPick }) {
+  // A game without its own cover still gets a plain box (a missing cover must not blank the whole hub)
   const Art = ART[game.id]
   return (
     <button
@@ -184,7 +203,7 @@ export function GameBox({ game, picked, onPick }) {
           : 'border-black/40 opacity-80 hover:-translate-y-1 hover:opacity-100'
       }`}
     >
-      <Art />
+      {Art ? <Art /> : <div className="flex h-full items-center justify-center bg-dusk p-3 text-center text-xl font-black">{game.name}</div>}
     </button>
   )
 }
