@@ -260,6 +260,30 @@ export const GAMES = [
     url: 'https://pltl-whats-the-damage.vercel.app/',
   },
   {
+    id: 'muralcrew',
+    minutes: [25, 45], // for the time filter
+    solo: true, // one student can play it alone
+    source: 'generated', // where its questions come from (see SOURCES)
+    shelf: 'math',
+    time: '25–45 min (depends on the rounds picked; the leader can set a clock)',
+    name: 'Mural Crew',
+    tagline: 'Paint the city wall, one stencil at a time.',
+    description:
+      "The projector shows one big mural, with a different scene every game, and every team owns a section of it. Each step shows a piece sketched on a grid: build its equation from the toolkit stencils, read its domain and range, find how steep it is, and mirror it across y = x. Every right answer sprays the piece onto the team's wall in its color.",
+    best: 'College algebra: transformations of the toolkit functions, domain and range, rates of change, inverses (3.2, 3.3, 3.5, 3.7)',
+    subjects: 'Math (college algebra)',
+    teams: '1–8 teams (at least 1 student each)',
+    questions: 'Generated pieces (no question bank): every team gets its own pieces and numbers every game',
+    howToPlay: [
+      'The leader opens the lobby and shows the join code. Students join on their phones and are put on teams; the leader picks the rounds (Place the stencil, Read the wall, Steep or flat, Mirror mural), an optional clock, and whether to include horizontal stretches.',
+      "Every phone shows the team's sketch. One student is the lead painter and sends the answer; the role rotates every step. Build the equation from a stencil with a, h and k, type intervals with ( or [, ∞ and ∪, or give a rate of change, a turning point or a mirrored point.",
+      "Wrong tries say what's off (too high, too far left, wrong brackets) and cost a quarter of a step's 50 points; after three, the team can see the answer and move on for 0.",
+      'Jumpstart mode (for the Jumpstart sections): friendlier numbers with no stretches, a worked first step on every question, a hint after one miss, and the answer after two.',
+      "The projector shows the whole mural being painted live, plus every team's current sketch. The leader can peek at any team's step and every answer tried (the answer stays hidden until asked for). The results show the finished mural, every step with its answer, and an Excel download.",
+    ],
+    url: 'https://pltl-mural-crew.vercel.app/',
+  },
+  {
     id: 'patchknight',
     minutes: [20, 40], // for the time filter
     solo: true, // one student can play it alone
