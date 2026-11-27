@@ -235,6 +235,30 @@ export const GAMES = [
     url: 'https://pltl-limiting-suspect.vercel.app/',
   },
   {
+    id: 'roommatefinder',
+    minutes: [25, 45], // for the time filter
+    solo: true, // one student can play it alone
+    source: 'generated', // where its questions come from (see SOURCES)
+    shelf: 'chemistry',
+    time: '25–45 min (depends on the rounds picked; the leader can set a clock)',
+    name: 'Roommate Finder',
+    tagline: 'Every atom needs a bed at the Octet Arms.',
+    description:
+      "Lewis Lab as an apartment complex. Atoms apply to move in as molecules and ions: the central atom is the landlord, bonds are shared rooms, lone pairs are private rooms, and the valence electrons are the deposit. Teams build Lewis structures on their phones, check formal charges and octet exceptions, and name each molecule's floor plan (VSEPR). Every right answer adds a floor to the team's building.",
+    best: 'Gen Chem 1 bonding and molecular geometry: valence electrons, Lewis structures, formal charge, resonance, octet exceptions, VSEPR shapes and bond angles, bond polarity',
+    subjects: 'Chemistry (general chemistry 1)',
+    teams: '1–8 teams (at least 1 student each)',
+    questions: 'Built in: about 60 molecules and ions, drawn at random for every team (the best Lewis structure is worked out by formal charges)',
+    howToPlay: [
+      'The leader opens the lobby and shows the join code. Students join on their phones and are put on teams; the leader picks the rounds (The deposit, Move-in day, House rules, Floor plan, and the optional Blanket hog) and an optional clock.',
+      "Every phone shows the team's applicant. One student is the lead leasing agent and sends the answer; the role rotates every step.",
+      'Move-in day: build the Lewis structure by tapping bonds (single, double, triple) and setting lone pairs, with a live electron counter. Wrong tries say what is off: over the deposit, an atom without its 8, or formal charges that could be better. Any equivalent resonance structure counts.',
+      "Wrong tries cost a quarter of a step's 50 points; after three, the team can see the answer and move on for 0. Every answer goes into the team's notes with the Lewis structure and a 3D floor plan.",
+      "The projector shows the Octet Arms, one building per team, with a new floor for every right answer. The leader can peek at any team's step and every answer tried (the answer stays hidden until asked for). The results show every step with its answer, and an Excel download.",
+    ],
+    url: 'https://pltl-roommate-finder.vercel.app/',
+  },
+  {
     id: 'whatsthedamage',
     minutes: [20, 45], // for the time filter
     solo: true, // one student can play it alone

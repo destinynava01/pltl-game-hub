@@ -186,7 +186,24 @@ function MuralCrewArt() {
   )
 }
 
-const ART = { cascade: CascadeArt, jeopardy: JeopardyArt, monopoly: MonopolyArt, escape: EscapeArt, imposter: ImposterArt, bakery: BakeryArt, patchknight: PatchKnightArt, organized: OrganizedArt, limitingsuspect: LimitingSuspectArt, whatsthedamage: WhatsTheDamageArt, spike: SpikeArt, muralcrew: MuralCrewArt }
+function RoommateFinderArt() {
+  return (
+    <div className="relative flex h-full flex-col overflow-hidden bg-[linear-gradient(#0b1026,#312e81)]">
+      <p className="mt-3 text-center text-[10px] font-bold uppercase tracking-[0.3em] text-[#fde68a]">PLTL · Chemistry</p>
+      <p className="mt-1 text-center text-xl font-black leading-tight text-[#fb7185] [text-shadow:0_0_8px_rgb(251_113_133/0.7)]">Roommate Finder</p>
+      <svg viewBox="0 0 120 80" className="mt-auto" aria-hidden="true">
+        <text x="60" y="10" textAnchor="middle" fontSize="8" fontWeight="800" fill="#fb7185">VACANCY</text>
+        <rect x="30" y="14" width="60" height="66" fill="#45374f" />
+        {[0, 1, 2, 3].map((r) => [0, 1, 2].map((c) => (
+          <rect key={`${r}${c}`} x={37 + c * 17} y={20 + r * 15} width="12" height="9" fill="#fde68a" opacity={(r + c) % 3 ? 0.9 : 0.4} />
+        )))}
+        <rect x="26" y="12" width="68" height="3" fill="#1a1424" />
+      </svg>
+    </div>
+  )
+}
+
+const ART = { cascade: CascadeArt, jeopardy: JeopardyArt, monopoly: MonopolyArt, escape: EscapeArt, imposter: ImposterArt, bakery: BakeryArt, patchknight: PatchKnightArt, organized: OrganizedArt, limitingsuspect: LimitingSuspectArt, whatsthedamage: WhatsTheDamageArt, spike: SpikeArt, muralcrew: MuralCrewArt, roommatefinder: RoommateFinderArt }
 
 export function GameBox({ game, picked, onPick }) {
   // A game without its own cover still gets a plain box (a missing cover must not blank the whole hub)
