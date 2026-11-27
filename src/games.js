@@ -287,6 +287,31 @@ export const GAMES = [
     url: 'https://pltl-roommate-finder.vercel.app/',
   },
   {
+    id: 'reefkeeper',
+    paper: 'and a calculator for logs, square roots and ICE tables', // shown as a "Bring paper" warning
+    minutes: [25, 45], // for the time filter
+    solo: true, // one student can play it alone
+    source: 'generated', // where its questions come from (see SOURCES)
+    shelf: 'chemistry',
+    time: '25–45 min (depends on the rounds picked; the leader can set a clock)',
+    name: 'Reef Keeper',
+    tagline: 'Keep the tank in balance, one fish at a time.',
+    description:
+      "Titration Station. Every team keeps an aquarium with its own fish, which need the water at the right pH. Teams test the water (strong acids and bases), work weak acids with Ka, mix a buffer that suits their fish, and titrate a sample while its curve draws itself on the projector. Every right answer adds a fish, and the water shows the pH of the team's latest sample.",
+    best: 'Gen Chem 2 acids and bases: pH and pOH, weak acids and Ka, percent ionization, buffers (Henderson–Hasselbalch), titration curves and indicators, acidic and basic salts',
+    subjects: 'Chemistry (general chemistry 2)',
+    teams: '1–8 teams (at least 1 student each)',
+    questions: 'Generated: every team gets its own fish, acids, buffers and titration every game',
+    howToPlay: [
+      'The leader opens the lobby and shows the join code. Students join on their phones and are put on teams; the leader picks the rounds (Test the water, Weak acids, Buffer the tank, Titrate a sample, and the optional Salts) and an optional clock.',
+      "Every phone shows the team's question. One student is the lead keeper and sends the answer (numbers like 4.75 or 1.8e-5); the role rotates every step.",
+      'Common slips get their own feedback: giving the pOH instead of the pH, a buffer ratio upside down, forgetting Ca(OH)₂ gives two OH⁻, treating a weak acid as strong, or pH 7 at a weak-acid equivalence point.',
+      "Wrong tries cost a quarter of a step's 50 points; after three, the team can see the answer and move on for 0 (and no fish). Every answer goes into the team's notes with the reason.",
+      "The projector shows every team's tank, with a fish for every right answer, and its titration curve as it draws in. The leader can peek at any team, report a problem, and download the results.",
+    ],
+    url: 'https://pltl-reef-keeper.vercel.app/',
+  },
+  {
     id: 'whatsthedamage',
     paper: 'for solving the systems of equations by hand', // shown as a "Bring paper" warning
     minutes: [20, 45], // for the time filter

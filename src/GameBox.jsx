@@ -228,7 +228,33 @@ function RoyalBloodlinesArt() {
   )
 }
 
-const ART = { cascade: CascadeArt, jeopardy: JeopardyArt, monopoly: MonopolyArt, escape: EscapeArt, imposter: ImposterArt, bakery: BakeryArt, patchknight: PatchKnightArt, organized: OrganizedArt, limitingsuspect: LimitingSuspectArt, whatsthedamage: WhatsTheDamageArt, spike: SpikeArt, muralcrew: MuralCrewArt, roommatefinder: RoommateFinderArt, royalbloodlines: RoyalBloodlinesArt }
+function ReefKeeperArt() {
+  return (
+    <div className="relative flex h-full flex-col overflow-hidden bg-[#031a2b] bg-[radial-gradient(ellipse_at_50%_-10%,rgb(125_211_252/0.3),transparent_60%)]">
+      <p className="mt-3 text-center text-[10px] font-bold uppercase tracking-[0.3em] text-[#7dd3fc]">PLTL · Chemistry</p>
+      <p className="mt-1 text-center text-xl font-black leading-tight text-[#2dd4bf]">Reef Keeper</p>
+      <svg viewBox="0 0 120 80" className="mx-3 mt-auto mb-3 rounded-md" aria-hidden="true">
+        <rect x="0" y="0" width="120" height="80" rx="6" fill="#0b4f6c" />
+        <rect x="0" y="6" width="120" height="74" fill="#40c057" opacity="0.45" />
+        <path d="M0 70 Q 30 64 60 70 T 120 68 L120 80 L0 80 Z" fill="#e9c99a" />
+        <path d="M12 72 Q 8 58 14 46 Q 18 38 14 30" fill="none" stroke="#2f9e44" strokeWidth="3" strokeLinecap="round" />
+        <path d="M104 72 Q 100 60 106 50" fill="none" stroke="#37b24d" strokeWidth="3" strokeLinecap="round" />
+        {[[40, 26], [70, 40], [52, 52], [86, 22]].map(([x, y]) => (
+          <g key={x} transform={`translate(${x} ${y})`}>
+            <path d="M-7 0 L-12 -4 L-11 0 L-12 4 Z" fill="#38bdf8" />
+            <ellipse cx="0" cy="0" rx="7" ry="4" fill="#38bdf8" />
+            <circle cx="4" cy="-1" r="1" fill="#03263d" />
+          </g>
+        ))}
+        <circle cx="30" cy="16" r="2" fill="none" stroke="#fff" strokeOpacity="0.7" />
+        <circle cx="94" cy="44" r="1.6" fill="none" stroke="#fff" strokeOpacity="0.7" />
+        <polyline points="62,74 70,72 78,70 84,66 86,48 90,40 112,38" fill="none" stroke="#fde68a" strokeWidth="1.6" opacity="0.9" />
+      </svg>
+    </div>
+  )
+}
+
+const ART = { cascade: CascadeArt, jeopardy: JeopardyArt, monopoly: MonopolyArt, escape: EscapeArt, imposter: ImposterArt, bakery: BakeryArt, patchknight: PatchKnightArt, organized: OrganizedArt, limitingsuspect: LimitingSuspectArt, whatsthedamage: WhatsTheDamageArt, spike: SpikeArt, muralcrew: MuralCrewArt, roommatefinder: RoommateFinderArt, royalbloodlines: RoyalBloodlinesArt, reefkeeper: ReefKeeperArt }
 
 export function GameBox({ game, picked, onPick }) {
   // A game without its own cover still gets a plain box (a missing cover must not blank the whole hub)
