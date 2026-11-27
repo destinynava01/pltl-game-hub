@@ -171,7 +171,7 @@ function SpikeArt() {
 function MuralCrewArt() {
   return (
     <div className="relative flex h-full flex-col overflow-hidden bg-[linear-gradient(#2e1a55,#9d3c72_60%,#f97366)]">
-      <p className="mt-3 text-center text-[10px] font-bold uppercase tracking-[0.3em] text-[#fde047]">PLTL · College Algebra</p>
+      <p className="mt-3 text-center text-[10px] font-bold uppercase tracking-[0.3em] text-[#fde047]">PLTL · Algebra</p>
       <p className="mt-1 -rotate-2 text-center text-2xl font-black tracking-wide text-[#f472b6] [text-shadow:2px_2px_0_#1a0d16]">Mural Crew</p>
       <svg viewBox="0 0 120 70" className="mt-auto" aria-hidden="true">
         <rect x="0" y="34" width="16" height="36" fill="#251a3b" /><rect x="18" y="22" width="20" height="48" fill="#1d1530" />
