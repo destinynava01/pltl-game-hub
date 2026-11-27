@@ -312,6 +312,31 @@ export const GAMES = [
     url: 'https://pltl-reef-keeper.vercel.app/',
   },
   {
+    id: 'derivativedojo',
+    paper: 'for working out the derivatives', // shown as a "Bring paper" warning
+    minutes: [25, 45], // for the time filter
+    solo: true, // one student can play it alone
+    source: 'generated', // where its questions come from (see SOURCES)
+    shelf: 'math',
+    time: '25–45 min (depends on the belts picked; the leader can set a clock)',
+    name: 'Derivative Dojo',
+    tagline: 'Master each rule, earn each belt, break every board.',
+    description:
+      "Calculus 1 derivative rules, one belt at a time: power, exponentials and logs, product, quotient, chain, and trig, with implicit differentiation and a black belt as options. Students type each derivative the way they'd write it, with a live preview, and any correct form counts. Every right answer breaks a board on the projector.",
+    best: 'Calculus 1: the derivative rules (power, eˣ and ln x, product, quotient, chain, trig and inverse trig), implicit and logarithmic differentiation',
+    subjects: 'Math (calculus 1)',
+    teams: '1–8 teams (at least 1 student each)',
+    questions: 'Generated: every team gets its own functions every game',
+    howToPlay: [
+      'The leader opens the lobby and shows the join code. Students join on their phones and are put on teams; the leader picks the belts (white through purple, and the optional brown and black) and an optional clock.',
+      "Every phone shows the team's function. One student is the lead fighter and types the derivative (like 6x^2 + cos(x)); a preview writes it out so typos are easy to catch. The role rotates every step.",
+      'Answers are checked at several x values, so any equivalent form counts. Common slips get their own feedback: the product of the derivatives, the quotient rule switched, a missing inner derivative, a sign on cos x.',
+      "Wrong tries cost a quarter of a step's 50 points; after three, the team can see the answer and move on for 0 (and no board). Every answer goes into the team's notes with the reason.",
+      "The projector shows every team's fighter in the highest belt earned, the belt rack, and the boards broken. The leader can peek at any team, report a problem, and download the results.",
+    ],
+    url: 'https://pltl-derivative-dojo.vercel.app/',
+  },
+  {
     id: 'whatsthedamage',
     paper: 'for solving the systems of equations by hand', // shown as a "Bring paper" warning
     minutes: [20, 45], // for the time filter
