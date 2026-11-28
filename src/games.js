@@ -337,6 +337,31 @@ export const GAMES = [
     url: 'https://pltl-derivative-dojo.vercel.app/',
   },
   {
+    id: 'beaconpoint',
+    paper: 'for sketching the unit circle, and a calculator', // shown as a "Bring paper" warning
+    minutes: [25, 45], // for the time filter
+    solo: true, // one student can play it alone
+    source: 'generated', // where its questions come from (see SOURCES)
+    shelf: 'math',
+    time: '25–45 min (depends on the rounds picked; the leader can set a clock)',
+    name: 'Beacon Point',
+    tagline: 'Read the circle. Swing the beam. Bring every ship home.',
+    description:
+      "Every team keeps a lighthouse on a rocky point at night. Teams convert degrees and radians, find quadrants, reference and coterminal angles, read exact sin, cos and tan off the unit circle, work with signs, sec, csc and cot, and finish with arc length, sector area and speed. The beam swings to every angle they solve, and every right answer guides a ship into the team's harbor.",
+    best: 'Pre-Calculus: radians and degrees, quadrants, reference and coterminal angles, the unit circle and exact trig values, signs of the trig functions, reciprocal functions, arc length, sector area, linear and angular speed',
+    subjects: 'Math (Pre-Calculus)',
+    teams: '1–8 teams (at least 1 student each)',
+    questions: 'Generated: every team gets its own angles and numbers every game',
+    howToPlay: [
+      'The leader opens the lobby and shows the join code. Students join on their phones and are put on teams; the leader picks the rounds (Set the beam, Find the ship, Read the light, Signal flags, and Range of the beam) and an optional clock.',
+      "Every phone shows the team's question. One student is the lead keeper and sends the answer; the role rotates every step. Exact answers are typed the way they'd be written (5pi/6, -sqrt(3)/2, undefined) with a live preview, and any equivalent exact form counts.",
+      'Common slips get their own feedback: 180/π instead of π/180, the wrong sign for the quadrant, sin and cos swapped, degrees in s = rθ, a missing ½ in the sector area.',
+      "Wrong tries cost a quarter of a step's 50 points; after three, the team can see the answer and move on for 0 (and that ship stays at sea). Every answer goes into the team's notes with the reason.",
+      "The projector shows every team's lighthouse, with the beam at the last angle solved and a ship in the harbor for every right answer. The leader can peek at any team, report a problem, and download the results.",
+    ],
+    url: 'https://pltl-beacon-point.vercel.app/',
+  },
+  {
     id: 'whatsthedamage',
     paper: 'for solving the systems of equations by hand', // shown as a "Bring paper" warning
     minutes: [20, 45], // for the time filter

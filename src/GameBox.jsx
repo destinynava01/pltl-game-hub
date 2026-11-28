@@ -316,7 +316,29 @@ function AuditorArt() {
   )
 }
 
-const ART = { cascade: CascadeArt, jeopardy: JeopardyArt, monopoly: MonopolyArt, escape: EscapeArt, imposter: ImposterArt, bakery: BakeryArt, patchknight: PatchKnightArt, organized: OrganizedArt, limitingsuspect: LimitingSuspectArt, whatsthedamage: WhatsTheDamageArt, spike: SpikeArt, muralcrew: MuralCrewArt, roommatefinder: RoommateFinderArt, royalbloodlines: RoyalBloodlinesArt, reefkeeper: ReefKeeperArt, treehousebuilders: TreehouseArt, derivativedojo: DojoArt, auditoriscoming: AuditorArt }
+function BeaconArt() {
+  return (
+    <div className="relative flex h-full flex-col overflow-hidden bg-[#0b1226] bg-[radial-gradient(ellipse_at_20%_-10%,rgb(251_191_36/0.22),transparent_55%)]">
+      <p className="mt-3 text-center text-[10px] font-bold uppercase tracking-[0.3em] text-[#a5b4d4]">PLTL · Math</p>
+      <p className="mt-1 text-center text-xl font-black leading-tight text-[#fbbf24]">Beacon Point</p>
+      <svg viewBox="0 0 120 80" className="mx-3 mt-auto mb-3 rounded-md" aria-hidden="true">
+        <rect width="120" height="80" rx="6" fill="#0f1a36" />
+        {[[10, 8], [40, 14], [70, 6], [104, 20], [90, 10]].map(([x, y]) => <circle key={x} cx={x} cy={y} r="0.8" fill="#e2e8f0" />)}
+        <rect y="54" width="120" height="26" fill="#123456" />
+        <path d="M30 28 L120 6 L120 40 Z" fill="#fde68a" opacity="0.35" />
+        <circle cx="30" cy="28" r="14" fill="none" stroke="#fde68a" strokeOpacity="0.4" strokeDasharray="2 2" />
+        <path d="M0 80 L0 52 L14 48 L40 50 L52 62 L40 74 L20 80 Z" fill="#1f2937" />
+        <path d="M25 52 L27 32 L33 32 L35 52 Z" fill="#f8fafc" /><path d="M26 44 L34 44 L34.4 48 L25.6 48 Z" fill="#f472b6" />
+        <rect x="26" y="25" width="8" height="7" fill="#0f172a" stroke="#cbd5e1" strokeWidth="0.6" /><circle cx="30" cy="28" r="2" fill="#fde047" />
+        <path d="M25 25 L30 21 L35 25 Z" fill="#475569" />
+        <rect x="64" y="66" width="56" height="2" fill="#78350f" />
+        {[68, 78, 88, 98, 108].map((x) => <g key={x} transform={`translate(${x} 64)`}><path d="M0 0 L7 0 L5.5 2.5 L1.5 2.5 Z" fill="#e2e8f0" /><path d="M3.8 0 L3.8 -5 L6.5 -1 Z" fill="#fbbf24" /></g>)}
+      </svg>
+    </div>
+  )
+}
+
+const ART = { cascade: CascadeArt, jeopardy: JeopardyArt, monopoly: MonopolyArt, escape: EscapeArt, imposter: ImposterArt, bakery: BakeryArt, patchknight: PatchKnightArt, organized: OrganizedArt, limitingsuspect: LimitingSuspectArt, whatsthedamage: WhatsTheDamageArt, spike: SpikeArt, muralcrew: MuralCrewArt, roommatefinder: RoommateFinderArt, royalbloodlines: RoyalBloodlinesArt, reefkeeper: ReefKeeperArt, treehousebuilders: TreehouseArt, derivativedojo: DojoArt, auditoriscoming: AuditorArt, beaconpoint: BeaconArt }
 
 export function GameBox({ game, picked, onPick }) {
   // A game without its own cover still gets a plain box (a missing cover must not blank the whole hub)
