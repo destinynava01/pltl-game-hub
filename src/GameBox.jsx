@@ -360,7 +360,28 @@ function StadiumArt() {
   )
 }
 
-const ART = { cascade: CascadeArt, jeopardy: JeopardyArt, monopoly: MonopolyArt, escape: EscapeArt, imposter: ImposterArt, bakery: BakeryArt, patchknight: PatchKnightArt, organized: OrganizedArt, limitingsuspect: LimitingSuspectArt, whatsthedamage: WhatsTheDamageArt, spike: SpikeArt, muralcrew: MuralCrewArt, roommatefinder: RoommateFinderArt, royalbloodlines: RoyalBloodlinesArt, reefkeeper: ReefKeeperArt, treehousebuilders: TreehouseArt, derivativedojo: DojoArt, auditoriscoming: AuditorArt, beaconpoint: BeaconArt, stadiumblackout: StadiumArt }
+function HeadToHeadArt() {
+  return (
+    <div className="relative flex h-full flex-col overflow-hidden bg-[#0a0a0f] bg-[radial-gradient(ellipse_at_30%_-10%,rgb(255_244_214/0.18),transparent_55%),radial-gradient(ellipse_at_70%_-10%,rgb(255_244_214/0.18),transparent_55%)]">
+      <p className="mt-3 text-center text-[10px] font-bold uppercase tracking-[0.3em] text-[#a9a6b8]">PLTL · Any subject</p>
+      <p className="mt-1 text-center text-xl font-black uppercase leading-tight text-[#f5c542]">Head to Head</p>
+      <svg viewBox="0 0 120 80" className="mx-3 mt-auto mb-3 rounded-md" aria-hidden="true">
+        <rect width="120" height="80" rx="6" fill="#07070b" />
+        <path d="M38 0 L30 0 L18 56 L50 56 Z" fill="#fff6dc" opacity="0.18" />
+        <path d="M90 0 L82 0 L70 56 L102 56 Z" fill="#fff6dc" opacity="0.18" />
+        <path d="M20 46 L100 46 L110 58 L10 58 Z" fill="#d9d3c3" />
+        <path d="M10 58 L60 58 L60 64 L10 64 Z" fill="#b91c1c" /><path d="M60 58 L110 58 L110 64 L60 64 Z" fill="#1d4ed8" />
+        <rect x="18" y="26" width="3" height="22" fill="#e11d48" /><rect x="99" y="26" width="3" height="22" fill="#3b82f6" />
+        {[30, 36, 42].map((y, i) => <line key={y} x1="20" y1={y} x2="100" y2={y} stroke={['#f4f1ea', '#e11d48', '#3b82f6'][i]} strokeWidth="1.2" />)}
+        <path d="M44 40 Q43 30 51 30 Q59 30 58 39 Q58 45 52 46 L46 46 Q43 45 44 40 Z" fill="#e11d48" stroke="#000" strokeWidth="0.8" />
+        <path d="M76 40 Q77 30 69 30 Q61 30 62 39 Q62 45 68 46 L74 46 Q77 45 76 40 Z" fill="#3b82f6" stroke="#000" strokeWidth="0.8" />
+        {[[16, 72], [40, 74], [80, 73], [104, 72]].map(([x, y]) => <circle key={x} cx={x} cy={y} r="5" fill="#15151d" />)}
+      </svg>
+    </div>
+  )
+}
+
+const ART = { cascade: CascadeArt, jeopardy: JeopardyArt, monopoly: MonopolyArt, escape: EscapeArt, imposter: ImposterArt, bakery: BakeryArt, patchknight: PatchKnightArt, organized: OrganizedArt, limitingsuspect: LimitingSuspectArt, whatsthedamage: WhatsTheDamageArt, spike: SpikeArt, muralcrew: MuralCrewArt, roommatefinder: RoommateFinderArt, royalbloodlines: RoyalBloodlinesArt, reefkeeper: ReefKeeperArt, treehousebuilders: TreehouseArt, derivativedojo: DojoArt, auditoriscoming: AuditorArt, beaconpoint: BeaconArt, stadiumblackout: StadiumArt, headtohead: HeadToHeadArt }
 
 export function GameBox({ game, picked, onPick }) {
   // A game without its own cover still gets a plain box (a missing cover must not blank the whole hub)

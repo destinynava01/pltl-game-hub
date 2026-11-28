@@ -186,6 +186,30 @@ export const GAMES = [
     url: 'https://pltl-imposter.vercel.app/',
   },
   {
+    id: 'headtohead',
+    minutes: [20, 40], // for the time filter
+    solo: false, // one student can play it alone
+    source: 'bank', // where its questions come from (see SOURCES)
+    shelf: 'any',
+    time: '20–40 min (depends on the number of teams and best of 1, 3 or 5)',
+    name: 'Head to Head',
+    tagline: 'Fight night. Answer first, land the punch, take the belt.',
+    description:
+      "Teams duel in a boxing bracket, every fight of a round at the same time. Both corners get the same multiple-choice question from the bank: the first right answer lands a punch, and a wrong answer locks that team out of the question. Lose your first fight and you drop into the Comeback Bracket for a second belt. A ring announcer calls the knockouts out loud.",
+    best: 'Fast review of any chapter in the question bank, with a competitive edge',
+    subjects: 'Any subject (courses shared with Jeopardy or Monopoly)',
+    teams: '2–8 teams (4 or 8 make a full bracket)',
+    questions: 'Multiple-choice questions from the shared question bank',
+    howToPlay: [
+      'The leader opens the lobby and shows the join code. Students join on their phones and are put on teams; the leader picks the chapters from the question bank and best of 1, 3 or 5.',
+      'Teams are seeded into a bracket. Between rounds the projector shows the matchups, and the fights start when the leader rings the bell.',
+      'In each fight both teams see the same question. One captain per team answers (the role rotates every question). The first right answer lands a punch; a wrong answer locks that team out of that question; if both miss, the next question starts.',
+      'Win the needed punches to win the fight. Teams that lose their first fight drop into the Comeback Bracket and fight for a second belt.',
+      'Sounds and a speaking ring announcer call the rounds, knockouts and champions (both can be muted). The leader can peek at any fight, award a stalled one, flag a question, and download the results.',
+    ],
+    url: 'https://pltl-head-to-head.vercel.app/',
+  },
+  {
     id: 'cascade',
     minutes: [15, 30], // for the time filter
     solo: true, // one student can play it alone
