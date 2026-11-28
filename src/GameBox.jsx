@@ -363,7 +363,7 @@ function StadiumArt() {
 function HeadToHeadArt() {
   return (
     <div className="relative flex h-full flex-col overflow-hidden bg-[#0a0a0f] bg-[radial-gradient(ellipse_at_30%_-10%,rgb(255_244_214/0.18),transparent_55%),radial-gradient(ellipse_at_70%_-10%,rgb(255_244_214/0.18),transparent_55%)]">
-      <p className="mt-3 text-center text-[10px] font-bold uppercase tracking-[0.3em] text-[#a9a6b8]">PLTL · Any subject</p>
+      <p className="mt-3 text-center text-[10px] font-bold uppercase tracking-[0.3em] text-[#a9a6b8]">PLTL · Versus</p>
       <p className="mt-1 text-center text-xl font-black uppercase leading-tight text-[#f5c542]">Head to Head</p>
       <svg viewBox="0 0 120 80" className="mx-3 mt-auto mb-3 rounded-md" aria-hidden="true">
         <rect width="120" height="80" rx="6" fill="#07070b" />

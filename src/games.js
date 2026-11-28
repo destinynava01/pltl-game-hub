@@ -197,7 +197,7 @@ export const GAMES = [
     description:
       "Teams duel in a boxing bracket, every fight of a round at the same time. Both corners get the same multiple-choice question from the bank: the first right answer lands a punch, and a wrong answer locks that team out of the question. Lose your first fight and you drop into the Comeback Bracket for a second belt. A ring announcer calls the knockouts out loud.",
     best: 'Fast review of any chapter in the question bank, with a competitive edge',
-    subjects: 'Any subject (courses shared with Jeopardy or Monopoly)',
+    subjects: 'Any subject',
     teams: '2–8 teams (4 or 8 make a full bracket)',
     questions: 'Multiple-choice questions from the shared question bank',
     howToPlay: [
