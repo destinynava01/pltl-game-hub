@@ -463,6 +463,31 @@ export const GAMES = [
     url: 'https://pltl-auditor-is-coming.vercel.app/',
   },
   {
+    id: 'stadiumblackout',
+    paper: 'and a calculator', // shown as a "Bring paper" warning
+    minutes: [30, 50], // for the time filter
+    solo: true, // one student can play it alone
+    source: 'generated', // where its questions come from (see SOURCES)
+    shelf: 'business-engineering',
+    time: '30–50 min (depends on the rounds picked; the leader can set a clock)',
+    name: 'Stadium Blackout',
+    tagline: 'Kickoff is at 8. The lights are out. Solve the circuits.',
+    description:
+      "The big game starts at 8 and every team's stadium is dark. Every problem comes with its circuit drawn: Ohm's law and power, series and parallel, KCL and KVL, nodal and mesh analysis, superposition, and Thevenin with maximum power. Every right answer lights up more of the team's stadium on the projector, from the light towers to the jumbotron.",
+    best: "Electrical Circuits I: Ohm's law, power and energy, equivalent resistance and dividers, KCL and KVL, the passive sign convention, nodal and mesh analysis, superposition, Thevenin equivalents and maximum power transfer",
+    subjects: 'Engineering (Electrical Circuits I)',
+    teams: '1–8 teams (at least 1 student each)',
+    questions: 'Generated: every team gets its own circuits every game, each drawn as a schematic',
+    howToPlay: [
+      "The leader opens the lobby and shows the join code. Students join on their phones and are put on teams; the leader picks the rounds (Ohm's law, Series and parallel, KCL and KVL, Nodal analysis, Mesh analysis, Superposition, and Thevenin and max power) and an optional clock.",
+      "Every phone shows the team's problem with its circuit. One student is the lead electrician and sends the answer (a number in A, V, Ω or W; mA and kΩ work too); the role rotates every step.",
+      'Common slips get their own feedback: V × R instead of V/R, a parallel pair treated as series, forgetting a resistor in the node equation, adding mesh currents in the shared branch, V_Th²/R_Th instead of V_Th²/(4R_Th).',
+      "Wrong tries cost a quarter of a step's 50 points; after three, the team can see the answer and move on for 0 (and that part of the stadium stays dark). Every answer goes into the team's notes with the work.",
+      "The projector shows every team's stadium coming back to life part by part, with fireworks when it's fully lit. The leader can peek at any team (with the circuit), report a problem, and download the results.",
+    ],
+    url: 'https://pltl-stadium-blackout.vercel.app/',
+  },
+  {
     id: 'patchknight',
     minutes: [20, 40], // for the time filter
     solo: true, // one student can play it alone
